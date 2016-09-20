@@ -1,0 +1,41 @@
+push 1    Ai que prazer - não cumprir um dever.
+print-last
+print-first
+is-empty
+push 2    Ter um livro para ler - e não o fazer!
+print-last
+print-first
+is-empty
+push 3    Ler é maçada, estudar é nada.
+print-last
+print-first
+is-empty
+push 4    O sol doira sem literatura. 
+print-last
+print-first
+is-empty
+push 5    O rio corre bem ou mal, sem edição original.
+print-last
+print-first
+is-empty
+push 6    E a brisa, essa, de tão naturalmente matinal, como tem tempo, não tem pressa...
+print-last
+print-first
+is-empty
+push 7    Livros são papéis pintados com tinta.
+print-last
+print-first
+is-empty
+push 8    Estudar é uma coisa em que está indistinta
+print-last
+print-first
+is-empty
+push 9    A distinção entre nada e coisa nenhuma.
+print-last
+print-first
+is-empty
+push 10   Quanto melhor é quando há bruma.
+print-last
+print-first
+is-empty
+exit

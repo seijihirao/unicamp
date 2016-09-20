@@ -1,0 +1,14 @@
+push             ...   No fim tu hás de ver que as coisas mais leves são as únicas que o vento não conseguiu levar   ...
+is-empty
+print-last
+print-first          
+push um dia desses choverá   
+is-empty
+print-last
+print-first
+push     Talvez amanhã ou talvez num amanhã, mas choverá!   
+is-empty
+print-last
+print-first
+is-empty
+exit

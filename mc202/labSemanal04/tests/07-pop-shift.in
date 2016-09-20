@@ -1,0 +1,102 @@
+push 1    Ai que prazer - não cumprir um dever.
+push 2    Ter um livro para ler - e não o fazer!
+push 3    Ler é maçada, estudar é nada.
+push 4    O sol doira sem literatura. 
+push 5    O rio corre bem ou mal, sem edição original.
+push 6    E a brisa, essa, de tão naturalmente matinal, como tem tempo, não tem pressa...
+push 7    Livros são papéis pintados com tinta.
+push 8    Estudar é uma coisa em que está indistinta
+push 9    A distinção entre nada e coisa nenhuma.
+push 10   Quanto melhor é quando há bruma.
+unshift 1    Ai que prazer - não cumprir um dever.
+unshift 2    Ter um livro para ler - e não o fazer!
+unshift 3    Ler é maçada, estudar é nada.
+unshift 4    O sol doira sem literatura. 
+unshift 5    O rio corre bem ou mal, sem edição original.
+unshift 6    E a brisa, essa, de tão naturalmente matinal, como tem tempo, não tem pressa...
+unshift 7    Livros são papéis pintados com tinta.
+unshift 8    Estudar é uma coisa em que está indistinta
+unshift 9    A distinção entre nada e coisa nenhuma.
+unshift 10   Quanto melhor é quando há bruma.
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+shift
+pop
+is-empty
+print-first
+print-last
+shift
+pop
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+shift
+pop
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+print-first
+print-last
+pop
+shift
+is-empty
+exit

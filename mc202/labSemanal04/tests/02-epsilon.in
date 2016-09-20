@@ -1,0 +1,15 @@
+push 
+is-empty
+print-first          
+print-last
+push          
+is-empty
+print-last
+print-first
+push  
+is-empty
+print-last
+print-first
+print-last
+print-first
+exit

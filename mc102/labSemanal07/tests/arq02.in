@@ -1,0 +1,45 @@
+10
+A00 Colera
+A01 Febres tifoide e paratifoide
+A02 Outras infeccoes por Salmonella
+A03 Shiguelose
+A04 Outras infeccoes intestinais bacterianas
+A06 Amebiase
+A07 Outras doencas intestinais por protozoarios
+A08 Infeccoes intestinais virais, outras e as nao especificadas
+A09 Diarreia e gastroenterite de origem infecciosa presumivel
+A15 Tuberculose respiratoria, com confirmacao bacteriologica e histologica
+8
+41132 Aarao Mendes Pinto Neto
+74146 Abdo Hassan Salman
+62635 Pablius Staduto Braga Da Silva
+27120 Pablo Alberto Guzovsky
+35661 Pablo Alfredo Piccini Diaz
+142283 Pablo Alvarez Auth
+7068 Branca Thereza Carvalho Lopes
+67169 Branca Valeria Salomon Bertocchi
+18 7
+9 8
+P
+add QTXTHKOEOQPGWJGO 8/12/2015 A00 41132
+add GDYPFWMGDJOK 8/10/2016 A00 7068
+add VIUHIUQYZLRWHKGV 11/3/2015 A08 41132
+rm JADSONSANTOS
+altdiag HORTENCIACARDOSO Outras infeccoes intestinais bacterianas
+altdiag ULLISSESPRUDENTE Amebiase
+add EPZOPGZKWIRGQV 24/6/2015 A15 7068
+add MTWVNAOQPGWJGO 20/3/2016 A06 35661
+altmed FABIANACARDOSO Abdo Hassan Salman
+altmed FABIANACARDOSO Pablo Alvarez Auth
+add KSOFUHCTPGKEAL 23/5/2015 A06 142283
+add STSTNACTANAWUMHKYX 29/1/2015 A07 35661
+rm CAROLINEARAUJO
+altdata VIVIANNENASCIMENTO 01/01/2016
+altdata ULLISSESPRUDENTE 01/01/2016
+altdiag ULLISSESPRUDENTE Febres tifoide e paratifoide
+add IENNUCQVWDIOAN 18/12/2015 A09 62635
+add PGOTOFPCDYHK 22/4/2016 A01 62635
+add MREZMTOEFWLWQY 23/8/2015 A03 35661
+rm BONIFACIONEVES
+0
+

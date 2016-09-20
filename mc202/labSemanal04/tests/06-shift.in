@@ -1,0 +1,39 @@
+is-empty
+unshift 10   Quanto melhor é quando há bruma.
+unshift 9    A distinção entre nada e coisa nenhuma.
+unshift 8    Estudar é uma coisa em que está indistinta
+unshift 7    Livros são papéis pintados com tinta.
+unshift 6    E a brisa, essa, de tão naturalmente matinal, como tem tempo, não tem pressa...
+unshift 5    O rio corre bem ou mal, sem edição original.
+unshift 4    O sol doira sem literatura. 
+unshift 3    Ler é maçada, estudar é nada.
+unshift 2    Ter um livro para ler - e não o fazer!
+unshift 1    Ai que prazer - não cumprir um dever.
+is-empty
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+is-empty
+exit

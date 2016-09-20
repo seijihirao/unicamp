@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
+<title>sqtpm</title>
+<link type="image/png" rel="icon" href="http://zap.ic.unicamp.br/sqtpm/icon.png">
+<link rel="stylesheet" type="text/css" href="labSemanal04_files/sqtpm.css" media="all">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body>
+<div id="wrapper"><div id="sidebar"><h1>sqtpm</h1><p style="margin-top:-15px"><small>[186837]</small></p><a href="javascript:;" onclick="window.history.go(-1); return false;">voltar</a></div><div id="content"><form method="post" action="sqtpm.cgi" enctype="multipart/form-data" name="sqtpm"><script type="text/javascript" src="labSemanal04_files/sqtpm.js"></script><input name="action" type="hidden"><input name="arg1" type="hidden"><input name="arg2" type="hidden"><b>Trabalho:</b> 04-din-circ<table><tbody><tr><td style="vertical-align:top">Linguagens: C<br>Arquivos-fonte a enviar: 3.<br>Data de abertura: 2016/09/12 14:00:00<br>Data limite para envio: 2016/09/19 12:00:00<br>Número máximo de envios: 25<br>Casos-de-teste abertos: <a href="javascript:;" onclick="wrap('dwn','04-din-circ','04-din-circ/casos-de-teste.tgz')" ;="">casos-de-teste.tgz</a><br></td></tr></tbody></table><hr>
+<h1>Seqüência circular em vetor dinâmico</h1>
+
+Vamos dizer que um conjunto de registros forma uma <i>seqüência</i> se
+eles são consecutivos e se a ordem relativa entre eles é importante.
+
+<p>
+Neste trabalho você deve implementar um vetor dinâmico para armazenar
+uma seqüência.  O vetor dinâmico deve permitir inserção no início e no
+final da seqüência, remoção do primeiro e do último elementos e
+recuperação do primeiro e do último elementos.  A seqüência deve ser
+circular, isto é, o primeiro elemento dela deve poder estar em
+qualquer posição do vetor.  Dessa forma, qualquer uma dessas operações
+pode ser realizada em tempo constante, não é necessário fazer
+deslocamento dos dados armazenados no vetor para a esquerda ou para a
+direita.
+
+</p><p>
+A seqüência circular de chaves inteiras [2,9,5,7] pode estar
+armazenada de várias formas em um vetor de tamanho 8, por exemplo:
+
+</p><pre>2 9 5 7 _ _ _ _
+_ _ 2 9 5 7 _ _
+_ _ _ _ 2 9 5 7
+5 7 _ _ _ _ 2 9 
+9 5 7 _ _ _ _ 2 
+</pre>
+
+Em todas elas, o primeiro elemento da seqüência é o 2 e o último é o 7.
+
+<p> Se um vetor circular contém a seqüência
+
+</p><pre>2 9 5 7 _ _ _ _
+</pre>
+
+e o número 6 é adicionado ao início da seqüência, então o vetor fica assim:
+
+<pre>2 9 5 7 _ _ _ 6
+</pre>
+
+Depois se o número 8 é adicionado ao início da seqüência,  o
+vetor deve ficar assim:
+
+<pre>2 9 5 7 _ _ 8 6
+</pre>
+
+
+<p>
+Durante o processamento, o número de posições vazias do vetor não deve
+exceder 3n, onde n é o número de posições ocupadas.  A política de
+crescimento do vetor deve ser dobrar quando estiver cheio e reduzir à
+metade quando estiver 1/4 ocupado.  Antes de terminar o programa deve
+liberar a memória ocupada pelo vetor dinâmico.
+
+</p><p>
+O vetor dinâmico deve ser implementado em um par de arquivos c e h
+separados.  O arquivo h deve conter as declarações do tipo de dados e
+das operações sobre o vetor dinâmico.  O arquivo c deve definir as
+funções.  O programa principal deve estar em um terceiro arquivo c.
+
+</p><p>
+Neste trabalho, o vetor dinâmico deve armazenar seqüências de cadeias
+de caracteres.  A memória usada por cada cadeia de caracteres deve ser
+a menor possível.
+
+</p><h3>Entrada</h3> 
+
+A entrada é composta por uma sucessão de comandos, um por linha.  Os
+possíveis comandos estão descritos abaixo.  
+
+<ul>
+
+<li>
+<pre>unshift cadeia
+</pre>
+
+<p>
+Insere uma cadeia no início da seqüência.  A cadeia é formada pelos
+caracteres depois de "unshift " e antes do fim-de-linha, descartando
+os espaços no início e no fim-de-linha.  A cadeia pode ser vazia.
+Apesar do nome, esta operação não deve deslocar os elementos que já
+estão na seqüência.
+
+</p></li><li>
+<pre>shift
+</pre>
+
+<p>
+Remove a cadeia no início da seqüência.  Se a seqüência estiver
+vazia, não faz nada.
+Apesar do nome, esta operação não deve deslocar os elementos que já
+estão na seqüência.
+
+</p></li><li>
+<pre>print-first
+</pre>
+
+<p>
+Imprime a cadeia no início da seqüência.  Se a seqüência estiver
+vazia, não faz nada.
+
+</p></li><li>
+<pre>push cadeia
+</pre>
+
+<p>
+Insere uma cadeia no fim da seqüência. A cadeia é formada pelos
+caracteres depois de "push " e antes do fim-de-linha, descartando
+os espaços no início e no fim-de-linha.  A cadeia
+pode ser vazia.
+
+</p></li><li>
+<pre>pop
+</pre>
+
+<p>
+Remove a cadeia no fim da seqüência. Se a seqüência estiver
+vazia, não faz nada.
+
+</p></li><li>
+<pre>print-last
+</pre>
+
+<p>
+Imprime a cadeia no fim da seqüência.  Se a seqüência estiver
+vazia, não faz nada.
+
+
+</p></li><li>
+<pre>is-empty
+</pre>
+
+<p>
+Imprime yep se a seqüência estiver vazia e nope se não estiver.
+
+</p></li><li>
+<pre>exit
+</pre>
+
+<p>
+Termina o programa.  
+</p></li></ul>
+
+
+<h3>Saída</h3> 
+A saída deve conter as linhas geradas pelos comandos print-first e print-last.
+
+<h3>Exemplo:</h3>
+
+<p>
+Entrada:
+</p><pre>is-empty
+pop
+print-last
+push   mas um dia
+push desses   
+push eu
+print-first
+print-last
+shift
+print-first
+is-empty
+exit
+</pre>
+
+Saída:
+<pre>yep
+mas um dia
+eu
+desses
+nope
+</pre>
+<hr></form></div>
+
+</div></body></html>

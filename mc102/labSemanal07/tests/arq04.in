@@ -1,0 +1,58 @@
+15
+A38 Escarlatina
+A39 Infeccao meningogocica
+A50 Sifilis congenita
+A51 Sifilis precoce
+A52 Sifilis tardia
+R07 Dor de garganta e no peito
+R51 Cefaleia
+S01 Ferimento da cabeca
+S02 Fratura do cranio e dos ossos da face
+S03 Luxacao, entorse ou distensao das articulacoes e dos ligamentos da cabeca
+S88 Amputacao traumatica da perna
+E66 Obesidade
+F10 Transtornos mentais e comportamentais devidos ao uso de alcool
+F20 Esquizofrenia
+F21 Transtorno esquizotipico
+6
+78594 Abdalla Youssef Skaf
+48085 Abdel Hafid Farid
+128568 Pablicio Martins Ferreira
+106740 Pabline Barbosa Lima Almeida
+52274 Brandao Gomes Co
+20776 Branderley Claudio
+5 2
+1 17
+D
+add PHNNZLAGANZJOTEBKKHRIMTXWM 1/4/2015 A38 78594
+rm RENANGIGANTEOLIVEIRAMATOSS
+add VTZXSBXPWMCIMSFNURTXMSZYCI 1/4/2015 A38 78594
+add PHOVWFRHJLAGYWWHMR 5/4/2015 R51 78594
+add JVXGAGWWDLCTQMFBHZYDWFWJEY 5/4/2015 S01 78594
+add XXKCNQCEXTOWUDKUKNBV 5/5/2015 A38 128568
+add SQIDCIGQVZOTEBKKHRMYMAID 5/5/2015 S02 128568
+rm RODRIGOCLAUDIOBATISTALOPES
+add HLTRANSOXGOIPRRHEXGZSOTEEY 5/6/2015 S88 128568
+add JVNNJKEMCRXXQJSFUDSSNDEKWLAA 5/7/2015 E66 128568
+add EKZQGHWVCHFBJICIGZCIMSZYCI 6/8/2015 A38 52274
+add XXKCNQWWIDRHOWKCYDJV 6/8/2015 A52 52274
+add PHNNTXBPVDSRWITRJLWLAA 6/8/2015 E66 52274
+altdiag RICARDOCARDOSOCASTRO Dor de garganta e no peito
+altdiag RICARDAODESOUZASILVA Luxacao, entorse ou distensao das articulacoes e dos ligamentos da cabeca
+add HRQSQJNEAGMLHZWFQTIDUIKCJVNA 7/8/2015 A38 52274
+altmed UELLCLEBERBARBOSADOSSANTOS Pabline Barbosa Lima Almeida
+altmed UELLCLEBERBARBOSADOSSANTOS Branderley Claudio
+add PHNNRTSFYCHZNNYROCZXFSAEWMCHNL 7/8/2015 A52 52274
+add JVMSTEWFMEGZOTEBKKHR 2/4/2015 A52 78594
+add PDAIPDDLTPEXKU 2/4/2015 A52 78594
+rm RONALDOGABRIELCRUZCERQUEIRAA
+rm ROSALVALIMADOLIVEIRA
+rm RUDSONPASSOSSARMENTOSANTOS
+altdiag RAQUELBRIGATTIALAVARSECARONN Transtornos mentais e comportamentais devidos ao uso de alcool
+altdiag DACIDALARGURAS Transtorno esquizotipico
+altdiag REINALDOVEIGAMUNIZ Sifilis precoce
+altmed RICARDAODESOUZASILVA Pabline Barbosa Lima Almeida
+altdata RICARDAODESOUZASILVA 6/7/2015
+altdata RICARDOCARDOSOCASTRO 8/8/2015
+0
+

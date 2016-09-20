@@ -1,0 +1,1 @@
+Ler "Genealogia do Ciborgue", da página 120 a 126, depois ler "Você é um Ciborgue" da página 18 a 34, e por fim "Nós, Ciborgues" da página 8 a 15.

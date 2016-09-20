@@ -1,0 +1,30 @@
+push a
+push b
+push c
+push d
+push e
+push f
+shift
+shift
+shift
+push g
+push h
+push i
+push j
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+shift
+print-first
+print-last
+pop
+shift
+print-first
+print-last
+shift
+is-empty
+exit

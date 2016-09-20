@@ -1,0 +1,13 @@
+is-empty
+pop
+print-last
+push   mas um dia
+push desses   
+push eu
+print-first
+print-last
+shift
+print-first
+is-empty
+exit
+
