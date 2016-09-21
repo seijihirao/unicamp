@@ -1,4 +1,4 @@
-# Introdução à Programação
+# Algoritmos e Programação de Computadores
 
 * Conceitos básicos de organização de computadores 
 * Construção de algoritmos e sua representação em pseudocódigo e linguagens de alto nível

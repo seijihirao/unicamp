@@ -17,7 +17,7 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
 * `MA141` - Geometria Analítica
 * `F128` - Física 1
 * `F129` - Física Experimental 1
-* `MC102` - Introdução à programação 
+* `MC102` - Algoritmos e Programação de Computadores 
 * `HZ291` - Tópicos Especiais de Humanidades
 
 ## 2º semestre
