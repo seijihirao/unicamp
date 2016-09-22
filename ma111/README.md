@@ -12,6 +12,6 @@
 
 A disciplina teve 3 provas, como no modelo de 2015, contido em `provas passadas`
 
-## Materiais
+## Material
 
 A disciplina usou o primeiro volume inteiro do James Stewart e do Guidorizzi

@@ -17,3 +17,7 @@ Os arquivos contidos são as tarefas para casa, chamados de `labSemanal`
 >Infelizmente o labSemanal01 não existe neste repositório
 
 >Infelizmente o labSemanal02 não tem documentação neste repositório 
+
+## Material
+
+Qualquer tutorial de C básico (até ponteiros).

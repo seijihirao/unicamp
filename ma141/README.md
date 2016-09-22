@@ -20,6 +20,6 @@ e a segunda com o conteúdo restante.
 
 A segunda prova foi realizada online por culpa da greve que aconteceu.
 
-## Materiais
+## Material
 
 Foi usado o livro do Reginaldo sobre Geometria Analítica

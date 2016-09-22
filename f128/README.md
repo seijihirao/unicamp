@@ -19,7 +19,7 @@ Ela contava com 3 provas, que seguiam o formato das provas anteriores.
 
 > Não houve a 3ª prova por culpa da greve
 
-## Materiais
+## Material
 
 Para esta disciplina foram usados os slides das aulas magnas, 
 ou o volume 1 do Halliday
