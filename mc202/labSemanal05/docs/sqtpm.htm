@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head>
+<title>sqtpm</title>
+<link type="image/png" rel="icon" href="http://zap.ic.unicamp.br/sqtpm/icon.png">
+<link rel="stylesheet" type="text/css" href="sqtpm_files/sqtpm.css" media="all">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body>
+<div id="wrapper"><div id="sidebar"><h1>sqtpm</h1><p style="margin-top:-15px"><small>[186837]</small></p><a href="javascript:;" onclick="window.history.go(-1); return false;">voltar</a></div><div id="content"><form method="post" action="sqtpm.cgi" enctype="multipart/form-data" name="sqtpm"><script type="text/javascript" src="sqtpm_files/sqtpm.js"></script><input name="action" type="hidden"><input name="arg1" type="hidden"><input name="arg2" type="hidden"><b>Trabalho:</b> 05-bits<table><tbody><tr><td style="vertical-align:top">Linguagens: C<br>Data de abertura: 2016/09/19 14:00:00<br>Data limite para envio: 2016/09/26 12:00:00<br>Número máximo de envios: 25<br>Casos-de-teste abertos: <a href="javascript:;" onclick="wrap('dwn','05-bits','05-bits/casos-de-teste.tgz')" ;="">casos-de-teste.tgz</a><br></td></tr></tbody></table><hr>
+<h1>Conjunto em vetor de bits</h1>
+
+Uma forma de representar um subconjunto S de {1,2,...,n} é usando
+um vetor de bits V.  Representado dessa forma, se o elemento i está em
+S então o bit i de V é igual a 1, caso contrário é igual a 0.
+
+<p>
+Essa representação usa sempre n bits para um subconjunto S de
+{1,2,...,n}.  Uma outra possibilidade é usar um vetor e armazenar nele
+apenas os elementos que estão em S, o que vai exigir |S| * lg n bits.
+Se S tem muitos elementos, então a representação usando vetor de bits
+será vantajosa.
+
+</p><p>
+Neste trabalho você deve representar um subconjunto de {1,2,...,n}
+como um vetor de bits.
+
+
+</p><h3>Entrada</h3> 
+A entrada é composta por uma sucessão de comandos, um por linha.  Os
+possíveis comandos estão descritos abaixo.  
+
+<ul>
+
+<li>
+<pre>create n
+</pre>
+
+<p>
+Cria um subconjunto vazio de {1,2,...,n}.  Vamos chamá-lo de S.  Se já
+existe um subconjunto ele deve ser destruído e um novo subconjunto
+deve ser criado.
+
+</p></li><li>
+<pre>add i
+</pre>
+
+<p>
+Adiciona o elemento i a S.
+
+</p></li><li>
+<pre>remove i
+</pre>
+
+<p>
+Remove o elemento i de S.
+
+</p></li><li>
+<pre>in i
+</pre>
+
+<p>
+Testa se o elemento i está em S.  Imprime "belongs(i) = " seguido de
+"true" se ele estiver ou "false" se ele não estiver.
+
+</p></li><li>
+<pre>rank i
+</pre>
+
+<p>
+Imprime "rank(i) = " e o número de elementos em S que são menores ou
+iguais a i.  Se i for maior que n, o programa não deve fazer nada.
+
+</p></li><li>
+<pre>select i
+</pre>
+
+<p>
+Imprime "select(i) = " e o i-ésimo menor elemento em S.  Se i for
+maior que |S|, o programa não deve fazer nada.
+
+</p></li><li>
+<pre>rangecount j k
+</pre>
+
+<p>
+Imprime "rangecount(j,k) = " e o número de elementos em S no intervalo [j,k].
+
+
+</p></li><li>
+<pre>print
+</pre>
+
+<p>
+Imprime "S = " e os elementos em S em ordem crescente em uma única
+linha, dentro de chaves e separados por vírgulas.
+
+</p></li><li>
+<pre>exit
+</pre>
+
+<p>
+Termina o programa.  
+</p></li></ul>
+
+<p>
+Sugere-se que as operações sejam implementadas diretamente para treinar a
+ manipulação de bits e não apenas fazendo uma chamada às macros set e 
+test que foram vistas em aula.
+
+
+</p><h3>Saída</h3> 
+A saída deve conter as linhas geradas pelos comandos na entrada.
+
+<h3>Exemplo:</h3>
+
+<p>
+Entrada:
+</p><pre>create 10
+add 1
+add 3
+add 5
+add 7
+add 9
+remove 9
+print
+in 9
+rank 5
+rank 6
+rank 7
+select 3
+select 4
+rangecount 2 6
+exit
+</pre>
+
+Saída:
+<pre>S = {1,3,5,7}
+belongs(9) = false
+rank(5) = 3
+rank(6) = 3
+rank(7) = 4
+select(3) = 5
+select(4) = 7
+rangecount(2,6) = 2
+</pre>
+<hr></form></div>
+
+</div></body></html>

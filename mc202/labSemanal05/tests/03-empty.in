@@ -1,0 +1,112 @@
+create 0
+print
+create 10
+print
+create 10
+add 1
+add 2
+add 3
+add 4
+add 5
+add 6
+add 7
+add 8
+add 9
+add 10
+remove 1
+remove 2
+remove 3
+remove 4
+remove 5
+remove 6
+remove 7
+remove 8
+remove 9
+remove 10
+rank 1
+rank 2
+rank 3
+rank 4
+rank 5
+rank 6
+rank 7
+rank 8
+rank 9
+rank 10
+select 1
+select 2
+select 3
+select 4
+select 5
+select 6
+select 7
+select 8
+select 9
+select 10
+rangecount 1 1
+rangecount 1 2
+rangecount 1 3
+rangecount 1 4
+rangecount 1 5
+rangecount 1 6
+rangecount 1 7
+rangecount 1 8
+rangecount 1 9
+rangecount 1 10
+rangecount 2 2
+rangecount 2 3
+rangecount 2 4
+rangecount 2 5
+rangecount 2 6
+rangecount 2 7
+rangecount 2 8
+rangecount 2 9
+rangecount 2 10
+rangecount 3 3
+rangecount 3 4
+rangecount 3 5
+rangecount 3 6
+rangecount 3 7
+rangecount 3 8
+rangecount 3 9
+rangecount 3 10
+rangecount 4 4
+rangecount 4 5
+rangecount 4 6
+rangecount 4 7
+rangecount 4 8
+rangecount 4 9
+rangecount 4 10
+rangecount 5 5
+rangecount 5 6
+rangecount 5 7
+rangecount 5 8
+rangecount 5 9
+rangecount 5 10
+rangecount 6 6
+rangecount 6 7
+rangecount 6 8
+rangecount 6 9
+rangecount 6 10
+rangecount 7 7
+rangecount 7 8
+rangecount 7 9
+rangecount 7 10
+rangecount 8 8
+rangecount 8 9
+rangecount 8 10
+rangecount 9 9
+rangecount 9 10
+rangecount 10 10
+in 1
+in 2
+in 3
+in 4
+in 5
+in 6
+in 7
+in 8
+in 9
+in 10
+print
+exit

@@ -1,0 +1,21 @@
+create 10
+add 1
+add 3
+add 5
+add 7
+add 9
+print
+rank 5
+rank 6
+rank 7
+create 10
+add 2
+add 4
+add 6
+add 8
+add 10
+print
+rank 5
+rank 6
+rank 7
+exit

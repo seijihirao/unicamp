@@ -1,0 +1,16 @@
+create 10
+add 1
+add 3
+add 5
+add 7
+add 9
+remove 9
+print
+in 9
+rank 5
+rank 6
+rank 7
+select 3
+select 4
+rangecount 2 6
+exit
