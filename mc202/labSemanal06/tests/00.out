@@ -1,0 +1,14 @@
+A
+ba
+xzY
+yxf
+bca
+qew
+gba
+dca
+tba
+eoqp
+tweq
+fedc
+DBCA
+CBEFDA
