@@ -1,0 +1,14 @@
+A A
+ba ab
+xzY Yxz
+yxf fxy
+bca abc
+qew weq
+gba abg
+dca acd
+tba abt
+eoqp poqe
+tweq qwet
+fedc cdef
+DBCA ACBD
+CBEFDA ABDCEF
