@@ -5,7 +5,7 @@ Bem vindo ao meu repositório da unicamp!
 Aqui eu guardo todo o conteúdo digital que eu usei e produzi enquanto na unicamp.
 Que começou em 2016!
 
-No final de cada ano irei também atualizar com scans das minhas anotações.
+No final de cada ano irei também atualizar com scans das minhas anotações. (mentira)
 
 >Github <3
 
