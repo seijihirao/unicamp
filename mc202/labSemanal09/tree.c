@@ -8,6 +8,8 @@
 Node *mountTree(){
     char cur_char;
     scanf("%c", &cur_char);
+    
+    //return null node
     if(cur_char == ')'){
         return NULL;
     }
@@ -23,7 +25,7 @@ Node *mountTree(){
     scanf("%32[^(]", values);
     scanf("%c", &cur_char);
     
-    //left node
+    //right node
     Edge *right = malloc(sizeof(Edge));
     right->node = mountTree();
     subtree->right = right;
@@ -45,9 +47,11 @@ Node *mountTree(){
 }
 
 float tree_maxWeight(Node *tree){
+    //return 0 if tree is empty
     if(!tree){
         return 0.0f;
     }
+
     float left_weight = tree->left->value + tree_maxWeight(tree->left->node);
     float right_weight = tree->right->value + tree_maxWeight(tree->right->node);
     
