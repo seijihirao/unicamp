@@ -5,7 +5,7 @@
 
 #include "tree.h"
 
-Node *mountTree(){
+Node *tree_mount(){
     char cur_char;
     scanf("%c", &cur_char);
     
@@ -17,7 +17,7 @@ Node *mountTree(){
 
     //left node
     Edge *left = malloc(sizeof(Edge));
-    left->node = mountTree();
+    left->node = tree_mount();
     subtree->left = left;
     
     //cache node and edge values to use later depending on left and right nodes
@@ -27,7 +27,7 @@ Node *mountTree(){
     
     //right node
     Edge *right = malloc(sizeof(Edge));
-    right->node = mountTree();
+    right->node = tree_mount();
     subtree->right = right;
     
     //sets node value and edge weights
@@ -58,3 +58,15 @@ float tree_maxWeight(Node *tree){
     return (left_weight > right_weight) ? left_weight : right_weight;
 }
 
+void tree_destroy(Node *tree){
+    if(!tree){
+        return;
+    }
+    tree_destroy(tree->left->node);
+    tree_destroy(tree->right->node);
+    
+    free(tree->left);
+    free(tree->right);
+    free(tree);
+
+}

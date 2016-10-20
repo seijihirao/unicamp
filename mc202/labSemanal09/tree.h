@@ -39,7 +39,7 @@ struct Edge{
  *
  * @returns Node *tree
  */
-Node *mountTree();
+Node *tree_mount();
 
 /**
  *  Find larger weight from tree
@@ -49,4 +49,11 @@ Node *mountTree();
  * @returns int max_weight
  */
 float tree_maxWeight(Node *tree);
+
+/**
+ *  frees tree space on memory
+ *
+ * @params Node *tree
+ */
+void tree_destroy(Node *tree);
 

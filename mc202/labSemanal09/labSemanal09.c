@@ -14,7 +14,9 @@
  */
 int main(){
     while(getchar() != EOF){
-        printf("%.3f\n", tree_maxWeight(mountTree()));
+        Node *tree = tree_mount();
+        printf("%.3f\n", tree_maxWeight(tree));
+        tree_destroy(tree);
         getchar();
     }
     return 0;
