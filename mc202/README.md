@@ -11,4 +11,4 @@ Além de diversos testes espalhados pelo período letivo e uma prova teórica pa
 
 ## Material
 
-Qualquer tutorial online sobre `listas`, `pilhas`, `filas`, `árvores` e/ou `grafos`
+Qualquer tutorial online sobre `listas`, `pilhas`, `filas`, `árvores`, `hashes` e/ou `grafos`
