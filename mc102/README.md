@@ -14,9 +14,6 @@ e a outra em casa (com um limite de 2 semanas)
 
 Os arquivos contidos são as tarefas para casa, chamados de `labSemanal`
 
->Infelizmente o labSemanal01 e labSemanal02 não tem documentação neste repositório 
->Infelizmente o labSemanal01 não tem testes neste repositório 
-
 ## Material
 
 Qualquer tutorial de C básico (até ponteiros).
