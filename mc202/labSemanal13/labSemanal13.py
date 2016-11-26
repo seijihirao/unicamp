@@ -12,7 +12,7 @@ measures = 25
 #
 # results
 #
-sort_algorithms = ['quicksort', 'mergesort']
+sort_algorithms = ['quicksort', 'mergesort', 'heapsort']
 times = {
     'kind': [],
     'size': [],
