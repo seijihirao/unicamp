@@ -27,4 +27,14 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
 * `F228` - Física 2
 * `F229` - Física Experimenta 2
 * `MC202` - Estruturas de Dados
+* `MC302` - Programação Orientada a Objetos `(proficiência)`
 * `EA772` - Circuitos Lógicos
+
+## 3º semestre
+
+* `MA311` - Cálculo 3
+* `F328` - Física 3
+* `F329` - Física Experimenta 3
+* `EA513` - Circuitos Elétricos
+* `EA773` - Laboratório de Circuitos Lógicos
+* `CE738` - Economia para Engenharia
