@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{circuitikz}
+
+\title{Lei de Ohm e curva característica do diodo}
+\author{
+    Eduardo Parducci - 170272
+    \and
+    Lucas Koiti Geminiani Tamanaha - 182579
+    \and
+    Rodrigo Seiji Piubeli Hirao - 186837
+    \and
+    Tanus Vaz Szabo - 187308
+}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \tableofcontents
+    \newpage
+    \listoffigures
+    \newpage
+    \section{Circuitos}
+    \begin{figure} [h!] 
+        \begin{circuitikz} \draw
+        (0,0) to[battery=$V$]   (0,4)
+        (0,4) to[R=$R_p$, o-o]    (4,4)
+        (4,4) to[voltmeter] (4,0)
+        (0,0) to[ammeter]   (4,0)
+        (4,4) --            (8,4)
+        (8,4) to[R=$R$, o-o]    (8,0)
+        (4,0) --            (8,0)
+        ;
+        \end{circuitikz}
+        \caption{Circuito 1}
+        \label{fig:circuit1}
+    \end{figure}
+    \begin{figure}[h!] 
+        \begin{circuitikz} \draw
+        (0,0) to[battery=$V$]   (0,4)
+        (0,4) to[R=$R_p$, o-o]    (4,4)
+        (4,4) to[voltmeter] (4,0)
+        (0,0) --            (4,0)
+        (4,4) --            (8,4)
+        (8,4) to[R=$R$, o-o]    (8,0)
+        (4,0) to[ammeter]   (8,0)
+        ;
+        \end{circuitikz}
+        \caption{Circuito 2}
+        \label{fig:circuit1}
+    \end{figure}
+\end{document}
