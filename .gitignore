@@ -2,3 +2,7 @@
 .config/reveal.js/
 other/
 **/template/
+*.log
+*.lof
+*.toc
+*.aux
