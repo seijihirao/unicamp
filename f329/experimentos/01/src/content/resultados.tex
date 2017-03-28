@@ -1,0 +1,8 @@
+\section{Resultados}
+    \begin{tikzpicture}
+        \begin{axis}[width=14cm]
+            \addplot [color=cyan, mark=o, smooth, ultra thick]
+                plot [error bars/.cd, y dir = both, y explicit]
+                table[x =x, y =y, y error =ey]{data/diodo.dat};
+        \end{axis}
+    \end{tikzpicture}
