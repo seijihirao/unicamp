@@ -1,66 +1,144 @@
 \section{Resultados}
-    \subsection{Resistor}
-        \begin{tabular}{||c | c||}
-            \hline
-            U(V)    &   i(A)    \\
-            \hline
-            0.001   &   0.001   \\
-            0.506   &   0.00489 \\
-            1.014   &   0.01004 \\
-            1.503   &   0.01497 \\
-            1.944   &   0.01957 \\
-            2.533   &   0.02549 \\
-            3.004   &   0.03002 \\
-            3.528   &   0.03551 \\
-            3.951   &   0.03978 \\
-            4.517   &   0.04541 \\
-            4.929   &   0.04940 \\
-            5.415   &   0.05450 \\
-            5.916   &   0.05916 \\
-            6.460   &   0.06490 \\
-            6.98    &   0.07001 \\
-            7.55    &   0.07580 \\
-            7.99    &   0.08020 \\
-            8.48    &   0.08520 \\
-            9.06    &   0.09090 \\
-            9.45    &   0.09490 \\
-            10.10   &   0.10140 \\
-            \hline
-        \end{tabular}
+    \subsection{Resistor ixU}
+        \begin{figure} [H] 
+            \centering
+            \begin{tabular}{||c | c||}
+                \hline
+                U(V)    &   i(A)    \\
+                \hline
+                0.001   &   0.001   \\
+                0.506   &   0.00489 \\
+                1.014   &   0.01004 \\
+                1.503   &   0.01497 \\
+                1.944   &   0.01957 \\
+                2.533   &   0.02549 \\
+                3.004   &   0.03002 \\
+                3.528   &   0.03551 \\
+                3.951   &   0.03978 \\
+                4.517   &   0.04541 \\
+                4.929   &   0.04940 \\
+                5.415   &   0.05450 \\
+                5.916   &   0.05916 \\
+                6.460   &   0.06490 \\
+                6.98    &   0.07001 \\
+                7.55    &   0.07580 \\
+                7.99    &   0.08020 \\
+                8.48    &   0.08520 \\
+                9.06    &   0.09090 \\
+                9.45    &   0.09490 \\
+                10.10   &   0.10140 \\
+                \hline
+            \end{tabular}
+            \caption{Tabela de dados da corrente adiquirida ao aumentar tensão em resistor}
+            \label{fig:tableR}
+        \end{figure}
 
-        \begin{tikzpicture}
-            \begin{axis}[width=14cm]
-                \addplot [color=cyan, mark=o, smooth, ultra thick]
-                    plot [error bars/.cd, y dir = both, y explicit]
-                    table[x =x, y =y]{data/resistor.dat};
-            \end{axis}
-        \end{tikzpicture}
+        \begin{figure} [H] 
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=14cm,
+                    xlabel={$U[V]$},
+                    ylabel={$i[A]$},
+                    xlabel style={below right},
+                    ylabel style={above left},
+                    ]
+                    \addplot [color=cyan, mark=o, smooth, ultra thick]
+                        plot [error bars/.cd, y dir = both, y explicit]
+                        table[x =x, y =y]{data/resistor.dat};
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em resistor}
+            \label{fig:graphR}
+        \end{figure}
 
-    \subsection{Diodo}
-        \begin{tabular}{||c | c||}
-            \hline
-            U(V)    &   i(A)    \\
-            \hline
-            0       &   -0.5    \\
-            0.27    &   0.02    \\
-            0.47    &   0.12    \\
-            0.55    &   0.16    \\
-            0.59    &   1.13    \\
-            0.65    &   6.73    \\
-            0.67    &   8.47    \\
-            0.70    &   17.18   \\
-            0.71    &   25.24   \\
-            0.72    &   26.24   \\
-            0.73    &   43.15   \\
-            0.74    &   43.15   \\
-            \hline
-        \end{tabular}
+    \subsection{Diodo ixU}
+        \begin{figure} [H] 
+            \centering
+            \begin{tabular}{||c | c||}
+                \hline
+                U(V)    &   i(A)    \\
+                \hline
+                0       &   -0.5    \\
+                0.27    &   0.02    \\
+                0.47    &   0.12    \\
+                0.55    &   0.16    \\
+                0.59    &   1.13    \\
+                0.65    &   6.73    \\
+                0.67    &   8.47    \\
+                0.70    &   17.18   \\
+                0.71    &   25.24   \\
+                0.72    &   26.24   \\
+                0.73    &   43.15   \\
+                0.74    &   43.15   \\
+                \hline
+            \end{tabular}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em diodo}
+            \label{fig:tableD}
+        \end{figure}
 
-        \begin{tikzpicture}
-            \begin{axis}[width=14cm,xmode=log]
-                \addplot [color=cyan, mark=o, smooth, ultra thick]
-                    plot [error bars/.cd, y dir = both, y explicit]
-                    table[x =x, y =y, x error=ex, y error=ey]{data/diodo.dat};
-            \end{axis}
-        \end{tikzpicture}
+        \begin{figure} [H] 
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=14cm,
+                    xmode=log,
+                    xlabel={$U[V]$},
+                    ylabel={$i[mA]$},
+                    xlabel style={below right},
+                    ylabel style={above left},
+                    ]
+                    \addplot [color=cyan, mark=o, smooth, ultra thick]
+                        plot [error bars/.cd, y dir = both, y explicit]
+                        table[x =x, y =y, x error=ex, y error=ey]{data/diodo.dat};
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em diodo}
+            \label{fig:graphD}
+        \end{figure}
+
+
+    \subsection{Diodo RxU}
+        \begin{figure} [H] 
+            \centering
+            \begin{tabular}{||c | c||}
+                \hline
+                U(V)    &$R(\Omega)$\\
+                \hline
+                -0.5    &   0       \\     
+                0.27    &   13.50   \\ 
+                0.47    &   3.910   \\ 
+                0.59    &   0.522   \\ 
+                0.65    &   0.096   \\ 
+                0.67    &   0.079   \\ 
+                0.70    &   0.040   \\ 
+                0.71    &   0.028   \\ 
+                0.72    &   0.027   \\ 
+                0.73    &   0.016   \\
+                0.74    &   0.017   \\
+                \hline
+            \end{tabular}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em diodo}
+            \label{fig:tableD2}
+        \end{figure}
+
+        \begin{figure} [H] 
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=14cm,
+                    xmode=log,
+                    xlabel={$U[V]$},
+                    ylabel={$R[\Omega]$},
+                    xlabel style={below right},
+                    ylabel style={above left},
+                    ]
+                    \addplot [color=cyan, mark=o, smooth, ultra thick]
+                        plot [error bars/.cd, y dir = both, y explicit]
+                        table[x =x, y =y, x error=ex, y error=ey]{data/diodo2.dat};
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em diodo}
+            \label{fig:graphD2}
+        \end{figure}
         
