@@ -80,3 +80,64 @@ Teoria Geral do Emprego, Juros e Moeda (1936)
  * Defesa `(reserva)` do mercado interno
  * Política de crédito direcionada
  * Estado-empresário `(estatais)`
+
+# Políticas de infraestrutura
+
+## Complexidade
+
+ * Diversas instâncias de pode públicos
+ * Grande montante de recursos investidos
+ * Longo prazo de maturação e retorno do capital
+ * Tarifas
+   * remuneração do capital e atração de investimentos
+ * Métodos de regulação
+   * correção de preços e tarifas
+   * padrão de qualidade dos serviços
+ * Financiamento
+   * Riscos
+   * Custos
+   * Prazos
+ * Impactos ambientais e sociais
+
+## Políticas
+
+ * Investidor e Operador: `Público ou privado?`
+ * Monopólio com Regulação ou competição?
+ * Marco regulatório 
+   * regras de entrada e saída
+   * condições claras de operação
+ * Agências reguladores
+ * Recursos
+   * Tesouro
+   * Concessões
+   * Dívida
+   * etc
+
+## Brasil
+
+### História
+
+ * Anos 80
+   * Endividamento externo, Crise fiscal e financeira do Estado
+   * Início "tímido" das privatizações
+ * Anos 90
+   * Programa Nacional de Desestatização
+   * PND `(Lei 8031/90)` e grandes privatizações
+   * "Novo" Papel do Estado = reguladores
+   * Leis de Concessões
+
+### Organização
+
+ * União
+   * Energia Elétrica
+   * Telecominicações
+   * Petróleo e Gás
+   * Portos e Aeroportos
+   * Infraestrutura de transporte interestadual
+ * Estados
+   * Infraestrutura de transporte estadual ou municipal
+   * Distribuição od Gás
+   * Saneamento
+ * Municípios, Estados e União
+   * Transportes públicos (urbano, suburbano, interestadual)
+   
