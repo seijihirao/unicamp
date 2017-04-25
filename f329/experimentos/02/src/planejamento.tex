@@ -1,0 +1,43 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+\usepackage{float}
+
+\newcommand\tab[1][0.6cm]{\hspace*{#1}}
+
+\input{content/header}
+
+\begin{document}
+    \input{content/cover}
+    \section{Material Utilizado}
+        \input{content/material}
+    \section{Procedimento}
+        \subsection{Determinar resistência $R_{x}$ utilizando a ponte de Wheatstone}
+            \tab Com o uso do multímetro na escala $\Omega$, checar o valor dos resistores nominais de
+            $68\Omega$ e $100\Omega$ anotando os valores e respectivos erros comparando-os com o nominal.
+            \par
+            Determinar o valor da tensão para a montagem do circuito 1 de forma que $R_{v}$ varie entre $10\Omega$ e $60\Omega$
+            fazendo com que potência dissipada em $R_{p}=100\Omega$ não ultrapasse $1,5W$.
+            \par
+            Montar o circuito 1 (Ponte de Wheatstone) e realizar 20 medições da tensão (multímetro na escala $V\backsimeq$ )
+            variando $R_{v}$ entre $10\Omega$ e $60\Omega$. Colocar os valores e seus respectivos erros em uma tabela
+            $R_{v}\pm\Delta R_{v}$ e $V\pm\Delta V$.\newline
+            \textbf{Obs:}Diminuir a variação $\Delta R_{v}=0,1\Omega$ quando os valores da tensão estiverem próximos de zero a fim de obter um
+            gráfico mais consistente.
+        \subsection{Determinar os coeficientes de fabricação do termistor}
+            \tab Anotar o número do termistor utilizado e montar o circuito 2 mantendo $R_{p}=100\Omega$.
+            \par
+            Colocar água e o aquecedor no Béquer de forma que a resistência do Aquecedor fique totalmente submersa na água.
+            \par
+            Ligar o Aquecedor e medir a temperatura da água, até atingir $T_{max}=333K$, desligar o aquecedor e realizar 30 medidas
+            da tensão até atingir $T_{min}=303K$ obtendo uma leitura a cada $\Delta T = 1K$ colocando os valores numa tabela $T\pm\Delta T$
+            e $V\pm\Delta V$.
+    \input{content/anexo}
+\end{document}

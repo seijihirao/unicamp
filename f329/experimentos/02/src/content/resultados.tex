@@ -1,0 +1,40 @@
+\section{Resultados}
+    \subsection{Tensão por Resistência}
+        \begin{figure} [H] 
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=14cm,
+                    xlabel={$R[\Omega]$},
+                    ylabel={$U[V]$},
+                    xlabel style={below right},
+                    ylabel style={above left},
+                    ]
+                    \addplot [color=cyan, mark=o, smooth, ultra thick]
+                        plot [error bars/.cd, y dir = both, y explicit]
+                        table[x =x, y =y, x error=ex, y error=ey]{data/ponte.dat};
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em diodo}
+            \label{fig:graphD2}
+        \end{figure}
+        
+        \begin{figure} [H] 
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[
+                    width=14cm,
+                    xlabel={$T[oC]$},
+                    ylabel={$U[V]$},
+                    xlabel style={below right},
+                    ylabel style={above left},
+                    ]
+                    \addplot [color=cyan, mark=o, smooth, ultra thick]
+                        plot [error bars/.cd, y dir = both, y explicit]
+                        table[x =x, y =y, x error=ex, y error=ey]{data/temperatura.2.dat};
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Gráfico da corrente adiquirida ao aumentar tensão em diodo}
+            \label{fig:graphD2}
+        \end{figure}
+        
