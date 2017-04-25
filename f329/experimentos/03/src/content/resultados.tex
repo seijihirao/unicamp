@@ -1,1 +1,117 @@
 \section{Resultados}
+    Como resultados do experimento foram descobertos 
+    4 cenários:
+
+    \begin{figure} [h!] 
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=10cm,
+                xlabel={$[cm]$},
+                ylabel={$[cm]$},
+                xlabel style={below right},
+                ylabel style={above left},
+                ]
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.1.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.2.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.3.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.4.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.5.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.6.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.7.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/pico.8.dat};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Campos Elétricos com a presença de um para raio}
+        \label{fig:graphPico}
+    \end{figure}
+
+    \begin{figure} [h!] 
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=10cm,
+                xlabel={$[cm]$},
+                ylabel={$[cm]$},
+                xlabel style={below right},
+                ylabel style={above left},
+                ]
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.1.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.2.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.3.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.4.1.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.4.2.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.5.1.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.5.2.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.6.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.7.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiola.8.dat};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Campos Elétricos com a presença de uma gaiola de Faraday redonda}
+        \label{fig:graphGaiola}
+    \end{figure}
+
+    \begin{figure} [h!] 
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=10cm,
+                xlabel={$[cm]$},
+                ylabel={$[cm]$},
+                xlabel style={below right},
+                ylabel style={above left},
+                ]
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiolac.1.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiolac.2.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiolac.3.dat};
+                \addplot [color=cyan, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[x =x, y =y, x error=ex, y error=ey]{data/gaiolac.4.dat};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Campos Elétricos com a presença de uma gaiola de Faraday carregada}
+        \label{fig:graphGaiolac}
+    \end{figure}
