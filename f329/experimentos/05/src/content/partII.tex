@@ -1,0 +1,45 @@
+\section{Parte 2}
+    \subsection{Gráfico}
+        \begin{figure} [H] 
+            \includegraphics[width=\textwidth]{02}
+            \caption{Gráfico de $t$ por $ln(V_{cap})$}
+            \label{fig:02}
+        \end{figure}
+
+    \subsection{A constante de tempo}
+        
+        Similarmente ao que foi realizado na parte 1.2, pode-se determinar 
+        a constante de tempo e seu erro através das mesmas fórmulas já utilizadas. 
+        Assim:
+
+        $$\tau = -\frac{1}{A} = 4,476 \times 10^{-4} s = 447 \mu s$$
+
+        E seu erro:
+
+        $$\Delta\tau = 6 \times 10^{-6}s = 6\mu s$$
+
+        Conclui-se que:
+
+        $$\tau = (448 \pm 6) \mu s$$
+
+    \subsection{Constante de tempo vs valor esperado}
+
+        Para a constante de tempo calculada através dos valores nominais
+        ($R = (9,83 \pm 2) k\Omega$ e $C = (47,00 \pm 0,01) nF$) 
+        e seus erros, obtem-se:
+
+        $$\tau = RC = 0,00047s = 470\mu s$$
+
+        E seu erro:
+
+        $$\Delta\tau = (\frac{\partial\tau}{\partial R})^2 \times \Delta R^2
+        + (\frac{\partial\tau}{\partial C})^2\times\Delta C^2$$
+
+        $$\Delta\tau = 0,000095s = 95\mu s$$
+
+        Portanto:
+
+        $$\tau = (470 \pm 90)\mu s$$
+
+        Concluiu-se, portanto, que os valores experimentais e teóricos 
+        concordam pois seus valores estão abrangidos nos erros esperados.
