@@ -1,0 +1,21 @@
+\section{Análise de Dados}
+    Com os dados obtidos na tabela da figura \ref{fig:tableR} podemos construir o gráfico da figura \ref{fig:graphR}.
+
+    Através da relação entre a tensão e a corrente, podemos linearizar o gráfico acima, respeitando a relação $U = R\times I$
+    utilizando o método dos mínimos quadrados juntamente com propagação de erros para calcular sua incerteza, a fim de obtermos
+    uma relação no formato $(R_{exp}\pm \Delta R_{exp})\Omega$. Obtendo o gráfico da figura \ref{fig:graphMMQ}, com o Método dos Mínimos Quadrados:
+    \newline
+    $a = \overline{y} - b\overline{x}$ 
+    \newline
+    $b = \frac{\sum_{i=1}^{n}x_i(y_i-\overline{y})}{\sum_{i=1}^{n}x_i(x_i-\overline{x})}$ 
+    \newline
+
+    Finalmente, temos $R_{exp} = (99,9\pm 0,1)\Omega$
+
+    O diodo apresentou comportamento diferenciado, nota-se abaixo uma curva exponencial, impedindo a passagem de corrente quando
+    aplicado a uma tensão negativa, e possibilitando a passagem de corrente para tensões acima de $0,6V$, visível no gráfico da figura \ref{fig:graphD}
+
+    Novamente através da lei de Ôhm podemos construir o gráfico da resistência do diodo para cada ponto de medição, com sua devida
+    incerteza calculada através da propagação de erros da seguinte forma:
+    $\sigma_{R_{diodo}}=\sqrt{(\frac{\partial R}{\partial V})^2 \sigma_{V}^2 + (\frac{\partial R}{\partial i})^2 \sigma_{i}^2} $, 
+    como na figura \ref{fig:graphD2}.

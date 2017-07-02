@@ -1,0 +1,39 @@
+\section{Metodologia}
+    \subsection{Material Utilizado}
+        \input{content/material}
+    \subsection{Especificações do Multímetro digital MD-6680}
+        \tab Para a medição das \textbf{tensões}, coloca-se a chave seletora para a posição '$V\backsimeq$' e pressiona-se o botão
+        \textbf{DC} conectando duas das pontas de prova nos terminais \textbf{V} e \textbf{COM} e as outras em paralelo com o
+        dispositivo a ser medido. \newline
+        \textbf{Obs:}Resistência interna do voltímetro: $R_{Vint} = 10^6\Omega$\newline
+        \tab Resolução da escala utilizada: $ \Delta V =10^{-2} V$\newline
+
+        Para a medição das \textbf{correntes}, coloca-se a chave seletora para a posição '$mA\backsimeq$' e pressiona-se o botão
+        \textbf{DC} conectando duas das pontas de prova nos terminais \textbf{ $\mu$A, mA} e \textbf{COM} e as outras em série com o
+        dispositivo a ser medido. \newline
+        \textbf{Obs:}Resistência interna do amperímetro: $R_{Iint} = 10\Omega$\newline
+        \tab Resolução da escala utilizada: $ \Delta I =10^{-4} V$\newline
+
+        Para a medição das \textbf{resistências}, coloca-se a chave seletora para a posição '$\Omega$' e pressiona-se o botão
+        \textbf{SELECT} conectando duas das pontas de prova nos terminais \textbf{ Hz $\Omega$ mV} e \textbf{COM} e as outras em
+        paralelo com o dispositivo a ser medido. \newline
+        \textbf{Obs:} Resolução da escala utilizada: $ \Delta\Omega =10^{-1} \Omega$
+
+    \subsection{Procedimento}
+        \subsubsection{Medição das Resistências}
+            Com o uso do Multímetro, mediu-se as resistências nominais de $10\Omega, 100\Omega, 220\Omega$ a fim de comparar os valores obtidos
+            e suas incertezas com o nominal.
+        \subsubsection{Curva Característica do Resistor ($100\Omega$)}
+            Para levantar a curva característica (V x I) do resistor, montou-se o circuito 01 utilizando $R_{p}=10\Omega$ e tomou-se 21 medidas
+            de V e I variando a tensão com o uso da Fonte entre $V_{min}=0V$ e $V_{max}=10V$ aumentando-a gradativamente em $0,5V$ a fim de
+            verificar a característica ôhmica do resistor respeitando a lei de Ohm ($V=R\times I$)
+        \subsubsection{Curva Característica do Diodo}
+            Para a curva característica (V x I) do diodo de silício montou-se, inicialmente, o circuito 02 utilizando $R_{p}=10\Omega$ e tomou-se 5
+            medidas de V e I variando a tensão entre $V_{min}=-10V$ e $V_{max}=0V$ (polarização reversa) e 3 medidas variando a tensão entre
+            $V_{min}=0,2V$ e $V_{max}=0,5V$(polarização direta).\newline
+            Montou-se o circuito 03 utilizando $R_{p}=220\Omega$ e tomou-se 8 medidas de V e I variando a tensão entre $V_{min}=0,5V$ e $V_{max}=0,75V$.
+            \newline
+            
+            \textbf{Obs:}Para tensões acima de $0V$ foi realizada uma redução do intervalo de medição bem como a troca do circuito para tensões acima de
+            $0,5V$ pois sabe-se que o intervalo de disparo do diodo encontra-se entre $0V$ e $1V$, no qual ocorre um crescimento exponencial da corrente
+            elétrica.

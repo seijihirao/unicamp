@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{circuitikz}
+
+\input{content/header}
+
+\begin{document}
+    \input{content/cover}
+    \section{Material Utilizado}
+        \input{content/material}
+    \section{Procedimento}
+        \subsection{Determinar resistências}
+            Determinar o valor dos resisttores de 
+            $10\Omega, 100\Omega e 220\Omega$, 
+            com o uso do Multímetro na escala $\Omega$ 
+            juntamente com sua incerteza e comparar os valores com o nominal.
+            \newline
+            Determinar os valores mínimo e máximo de tensão para a realização do experimento.
+        \subsection{Curva do Resistor}
+            Montar o Circuito \ref{fig:circuitL} 
+            utilizando $R_p = 10\Omega$ e $R = 100\Omega$.
+            \newline
+            Realizar 24 medidas de tensão e corrente aumentando 
+            a tensão gradativamente em 0.5V, sendo $V_{min}=0V$ e $V_{max}=12V$. 
+            \newline
+            Colocar os dados numa tabela com os seus valores e respectivos erros $V\pm\Delta V$
+            e $i\pm\Delta i$
+        \subsection{Curva do Diodo (Polarização Direta)}
+            Montar o Circuito \ref{fig:circuitDiode} 
+            utilizando $R_p = 220\Omega$.
+            \newline
+            Realizar 20 medidas de tensão e corrente aumentando 
+            a tensão gradativamente em 0.5V, sendo $V_{min}=0V$ e $V_{max}=10V$. 
+            \newline
+            Colocar os dados numa tabela com os seus valores e respectivos erros $V\pm\Delta V$
+            e $i\pm\Delta i$
+        \subsection{Curva do Diodo (Polarização Reversa)}
+            Montar o Circuito \ref{fig:circuitDiodeR} 
+            utilizando $R_p = 10\Omega$.
+            \newline
+            Realizar 20 medidas de tensão e corrente aumentando 
+            a tensão gradativamente em 0.5V, sendo $V_{min}=0V$ e $V_{max}=10V$. 
+            \newline
+            Colocar os dados numa tabela com os seus valores e respectivos erros 
+            $V\pm\Delta V$ e $i\pm\Delta i$
+    \section{Circuitos}
+        \input{content/circuitos}
+\end{document}

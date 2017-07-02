@@ -1,0 +1,47 @@
+\section{Resultados}
+    Os períodos retirados da oscilação do imã foram:
+
+    \begin{figure} [H] 
+        \centering
+        \pgfplotstableset{
+            columns/i/.style={
+                column name={$i[mA]$},
+            },
+            columns/di/.style={
+                column name={$\sigma_i[mA]$},
+            },
+            columns/T/.style={
+                column name={$T[s]$},
+            },
+            columns/dT/.style={
+                column name={$\sigma_T[s]$},
+            },
+        }
+        \pgfplotstableread{data/Txi.dat}\loadedtable
+        \pgfplotstabletypeset{\loadedtable}
+        \caption{Tabela de períodos de oscilações do imã em função da corrente}
+        \label{fig:tableTxi}
+    \end{figure}
+
+    Assim gerando o gráfico de função:
+
+    $$f^2 = 24.6 i -0.3$$
+
+    \begin{figure} [H] 
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=10cm,
+                ylabel={$f^2[Hz^2]$},
+                xlabel={$i[A]$},
+                xlabel style={below right},
+                ylabel style={above left},
+                ]
+                \addplot [color=cyan, mark=o, smooth, ultra thick]
+                    plot [error bars/.cd, y dir = both, y explicit]
+                    table[y=f2, x=i]{data/fxi.dat};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Gráfico do quadrado da frequência das oscilações em função da corrente}
+        \label{fig:graphfxi}
+    \end{figure}

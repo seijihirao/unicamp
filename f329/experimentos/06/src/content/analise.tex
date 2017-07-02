@@ -1,0 +1,56 @@
+\section{Análise de Dados}
+    Após a medida dos dados foi utilizado a equação:
+
+    $$m_I = m (\frac{r^2}{4} + \frac{L^2}{12})$$
+
+    Propagando:
+
+    $$\sigma_{m_I} = \sqrt{
+        (\frac{r^2}{4} + \frac{L^2}{12})^2 \sigma_m^2 + 
+        (m (\frac{r}{2} + \frac{L^2}{12}))^2 \sigma_r^2 + 
+        (m (\frac{r^2}{4} + \frac{L}{6}))^2 \sigma_L^2 + 
+    }$$
+
+
+    Para descobrir o momento de inércia do ímã,
+    e a equação:
+
+    $$B_{Helmholtz} = 
+    \frac{8\mu_0 I N}{5^{\frac{3}{2}}}$$
+
+    adaptada para:
+
+    $$f^2 = \frac{\mu}{4 \pi^2 m_I} 
+    [(\frac{8\mu_0 N}{5^{\frac{3}{2}} R}) I \pm B_{Terra}]$$
+    
+    Para descobrirmos que o coeficiente angular é:
+
+    $$a = \frac{2 \mu \mu_0 N}{5^{\frac{3}{2}}\pi^2 m_I} $$
+    $$\mu = \frac{5^{\frac{3}{2}} R a \pi^2 m_I}{2 \mu_0 N} $$
+    
+    Propagando:
+
+    $$\sigma_\mu = \sqrt{
+        (\frac{5^{\frac{3}{2}} R \pi^2 m_I}{2 \mu_o N})^2 \sigma_a^2 + 
+        (\frac{5^{\frac{3}{2}} R \pi^2 a}{2 \mu_o N})^2 \sigma_{m_I}^2 + 
+        (\frac{5^{\frac{3}{2}}\pi^2 a m_I}{2 \mu_o N})^2 \sigma_{R}^2
+    }$$
+
+    E o coeficiente linear é:
+
+    $$b = \pm \frac{\mu B_{Terra}}{4 \pi^2 m_I}$$
+    $$B_{Terra} = \frac{|b| 4 \pi^2 m_I}{\mu}$$
+
+    Propagando:
+
+    $$\sigma_{B_{Terra}} = \sqrt{
+        (\frac{|b| 4 \pi^2 m_I}{b \mu})^2 \sigma_b^2 +
+        (\frac{|b| 4 \pi^2}{\mu})^2 \sigma_{m_I}^2 +
+        (-\frac{|b| 4 \pi^2 m_I}{\mu^2})^2 \sigma_\mu^2
+    }$$
+
+    Assim conseguindo:
+
+    $$m_I = (2,92 \pm 0,01) \times 10^{-7} kg m^2$$
+    $$\mu = (2,43 \pm 0,01) \times 10^{-1} A m^2$$
+    $$B_{Terra} = (1,44 \pm 0,07) \times 10^{-5} T$$

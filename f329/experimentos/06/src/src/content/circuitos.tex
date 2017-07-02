@@ -1,0 +1,60 @@
+\begin{figure} [H] 
+    \centering
+    \begin{circuitikz} \draw
+    (0,0) to[battery=$V$]   (0,4)
+    (0,4) to[R=$R_p$, o-o]  (4,4)
+    (4,4) to[voltmeter]     (4,0)
+    (0,0) to[ammeter]       (4,0)
+    (4,4) --                (8,4)
+    (8,4) to[R=$R$, o-o]    (8,0)
+    (4,0) --                (8,0)
+    ;
+    \end{circuitikz}
+    \caption{Circuito para medição de resistências pequenas}
+    \label{fig:circuitL}
+\end{figure}
+\begin{figure}[H]  
+    \centering
+    \begin{circuitikz} \draw
+    (0,0) to[battery=$V$]   (0,4)
+    (0,4) to[R=$R_p$, o-o]  (4,4)
+    (4,4) to[voltmeter]     (4,0)
+    (0,0) --                (4,0)
+    (4,4) --                (8,4)
+    (8,4) to[R=$R$, o-o]    (8,0)
+    (4,0) to[ammeter]       (8,0)
+    ;
+    \end{circuitikz}
+    \caption{Circuito para medição de resistências grandes}
+    \label{fig:circuitH}
+\end{figure}
+\begin{figure}[H]  
+    \centering
+    \begin{circuitikz} \draw
+    (0,0) to[battery=$V$]   (0,4)
+    (0,4) to[R=$R_p$, o-o]  (4,4)
+    (4,4) to[voltmeter]     (4,0)
+    (0,0) to[ammeter]       (4,0)
+    (4,4) --                (8,4)
+    (8,4) to[Do]            (8,0)
+    (4,0) --                (8,0)
+    ;
+    \end{circuitikz}
+    \caption{Circuito de montagem do diodo na polarização direta}
+    \label{fig:circuitDiode}
+\end{figure}
+\begin{figure}[H]  
+    \centering
+    \begin{circuitikz} \draw
+    (0,0) to[battery=$V$]   (0,4)
+    (0,4) to[R=$R_p$, o-o]  (4,4)
+    (4,4) to[voltmeter]     (4,0)
+    (0,0) --                (4,0)
+    (4,4) --                (8,4)
+    (8,0) to[Do]            (8,4)
+    (4,0) to[ammeter]       (8,0)
+    ;
+    \end{circuitikz}
+    \caption{Circuito de montagem do diodo na polarização reversa}
+    \label{fig:circuitDiodeR}
+\end{figure}

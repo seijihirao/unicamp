@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{circuitikz}
+\usepackage{float}
+
+\input{content/header}
+
+\begin{document}
+    \input{content/cover}
+    \section{Materiais}
+        \input{content/material}
+    \section{Procedimento}
+        \subsection{Preparo do ambiente}
+            Primeiro deve-se alinhar a Bobina ao campo magnético da terra,
+            com ajuda da bússola.
+            E montar o circuito:
+            \input{content/circuitos}
+        \subsection{Medidas}
+            Primeiro serão medidas as dimenções das bobinas e do imã.
+            
+            Deixa-se o imã oscilando dentro do campo linear criado
+            pela bobina, assim medindo seu período de oscilação.
+
+            Serão feitas as medidas de 50 oscilações por vez em 10
+            correntes diferentes (variando de 20 a 200mA)
+\end{document}
