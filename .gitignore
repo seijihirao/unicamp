@@ -1,8 +1,12 @@
+# private files
 .config/eduroam/cat_installer.conf
 .config/reveal.js/
 other/
+
+# workspace files
 **/template/
 *.log
 *.lof
 *.toc
 *.aux
+octave-workspace
