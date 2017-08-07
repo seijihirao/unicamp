@@ -34,7 +34,14 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
 
 * `MA311` - Cálculo 3
 * `F328` - Física 3
-* `F329` - Física Experimenta 3
+* `F329` - Física Experimental 3
 * `EA513` - Circuitos Elétricos
 * `EA773` - Laboratório de Circuitos Lógicos
 * `CE738` - Economia para Engenharia
+
+## 4º semestre
+
+ * `F429` - Física Experimental 4
+ * `MC404` - Organização Básica de Computadores e Linguagem de Montagem
+ * `MC039` - Seminários sobre Computação e Tecnologia
+ * `EA044` - Planejamento e Análise de Sistemas de Produção
