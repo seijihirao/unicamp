@@ -1,0 +1,14 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "Palestra sobre node, mc039",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test is for losers\" && exit 1"
+  },
+  "author": "Rodrigo Seiji Piubeli Hirao",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
