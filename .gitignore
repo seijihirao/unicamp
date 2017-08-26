@@ -9,4 +9,5 @@ other/
 *.lof
 *.toc
 *.aux
+node_modules
 octave-workspace
