@@ -1,0 +1,33 @@
+#
+# Nome: Rodrigo Seiji P. Hirao
+# RA:   186837
+#
+
+# Testes
+
+3FD	0000000100
+3FE	0000000150
+3FF	0000000005
+
+# Variaveis
+
+050	0000000000	# Contador
+
+# Constantes
+
+070	0000000001	# Step
+
+# Codigo
+
+000	LOAD M(3FD);		STOR M(001, 8:19);
+001	LOAD MQ,M(000);		LOAD M(3FE);
+002	STOR M(003, 28:39);	JUMP M(003, 0:19);
+003 MUL M(000);         JUMP M(004, 0:19);
+004	LOAD MQ;		    ADD M(0A0);
+005	STOR M(0A0);		LOAD M(3FD);
+006	ADD M(070);		    STOR M(3FD);
+007	LOAD M(3FE);		ADD M(070);
+008	STOR M(3FE);		LOAD M(3FF);
+009	SUB M(070);	    	STOR M(3FF);
+00A	JUMP+M(000, 0:19);	LOAD M(0A0);
+00B	JUMP M(400, 0:19);
