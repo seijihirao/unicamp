@@ -1,0 +1,384 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+%% Sets page size and margins
+\usepackage[
+	a4paper,
+    top=3cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    marginparwidth=1.75cm
+]{geometry}
+
+%%tabelas sofisticadas
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+
+%% Pacotes úteis
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure} %pacote para  subfiguras
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage{gensymb}
+
+%% Desenhando circuitos
+\usepackage{circuitikz}
+
+
+\title{Resposta espectral de circuitos RC, RL, RLC}
+\author{
+    Gustavo de Noraes Furtado (150653)
+    \and 
+	Guilherme Hasse Urel (157946)
+    \and
+	João Pedro de Amorim (176131)
+	\and 
+    Rodrigo Seiji Piubeli Hirao (186837)
+    }
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Através do seguinte experimento evolvendo circuitos RC E RLC, foram observados filtros de circuitos elétricos tipo passa-baixa e tipo passa-banda, respectivamente. E com a análise dos dados, obtidos com o auxílio do osciloscópio, pode-se gerar os Diagramas de Bode, relacionando a transmitância e a fase do circuito em função da frequência.
+\end{abstract}
+
+\section{Introdução}
+	Muitos dispositivos atuais fazem o uso de circuitos elétricos formados por elementos simples como resistores, indutores e capacitores. Tais elementos possibilitam a determinação de grandezas físicas básicas como a carga elétrica e suas derivadas: corrente elétrica e derivada da corrente elétrica. Devido às características dos elementos constituintes e seu arranjo, tais circuitos apresentam comportamentos de grande interesse, devido às inúmeras aplicações tecnológicas possíveis. 
+	Ao analisarmos circuitos RLC (formados por resistores, indutores e capacitores) excitados por uma fonte de corrente alternada, podemos observar a grande dependência que o sinal de saída tem com relação a frequência de excitação. Por essa característica específica tais circuitos são empregados comumente como filtros de frequência, barrando ou não determinados sinais de acordo com a frequência dos mesmos. Visando explorar o funcionamento desses filtros, suas peculiaridades e também o aprofundamento nos conceitos que regem tais fenômenos, alguns problemas foram propostos para solução através do emprego de tais circuitos. A familiarização com os circuitos de corrente alternada de uma forma geral e alguns conceitos empregados para a sua análise também se deram através da solução desses casos. A análise de resposta em frequência apresenta-se então como uma poderosa ferramenta nesse contexto, para a caracterização dos parâmetros de interesse desses  sistemas. 
+
+\section{Materiais e métodos}
+
+Neste experimento, para a montagem dos filtros do tipo passa-baixa (a partir de um circuito RC) e passa-banda (a partir de um circuito RLC), utilizamos:
+
+\subsection{Componentes do circuito passa-baixa e equipamentos:}
+
+\begin{itemize}
+\item \textbf{Resistor} -- Valor nominal: 1 k$\Omega$
+\item \textbf{Capacitor} -- Valor nominal: 0,22 $\mu F$
+\item \textbf{Osciloscópio}
+\item \textbf{Gerador de Ondas}
+\item \textbf{Cabo BNC-banana}
+\end{itemize}
+
+\subsection{Componentes do circuito passa-banda e equipamentos:}
+
+\begin{itemize}
+	\item \textbf{Indutor} -- Valor nominal: 48,6 mH
+	\item \textbf{Capacitor} -- Valor nominal: 0,44 $\mu F$
+	\item \textbf{Osciloscópio}
+	\item \textbf{Gerador de Ondas}
+	\item \textbf{Cabo BNC-banana}
+\end{itemize}
+
+\begin{figure} [H]
+\centering
+\begin{circuitikz}[scale=1]
+		\node (Xi) at (0.7,0.7) {$V_1$};
+		\node (Xf) at (3.7,0.7) {$V_2$};
+		\draw [semithick,->] (Xi) -- (0.1,0.1);
+		\draw [semithick,->] (Xf) -- (3.1,0.1);
+		\draw to [resistor, o-o, l_=$R$] ++(2,0)
+			(2,0) to [short,o-o] ++(1,0)
+			(2,0) to [capacitor, o-o, l=$C$] ++(0,-2)
+			node[ground] {};
+\end{circuitikz}
+\caption{Circuito RC para o filtro passa-baixa}
+\label{fig:rc}
+\end{figure}
+
+\begin{figure} [H]
+\centering
+\begin{circuitikz}[scale=1]
+		\node (Xi) at (0.7,0.7) {$V_1$};
+		\node (Xf) at (5.7,0.7) {$V_2$};
+		\draw [semithick,->] (Xi) -- (0.1,0.1);
+		\draw [semithick,->] (Xf) -- (5.1,0.1);
+		\draw 
+        	(0,0) to [resistor, o-o, l_=$R$] ++(2,0)
+        	(2,0) to [capacitor, o-o, l_=$C$] ++(2,0)
+			(4,0) to [short,o-o] ++(1,0)
+			(4,0) to [inductor, o-o, l=$L$] ++(0,-2)
+			node[ground] {};
+\end{circuitikz}
+\caption{Circuito RLC para o filtro passa-banda}
+\label{fig:rlc}
+\end{figure}
+
+\subsection{Cálculo}
+
+\subsubsection{Circuito RC (Passa-Baixa)}
+
+\paragraph{Para o cálculo de $T_{dB}$} foi usado a equação:
+
+$$
+	H(\omega) = 
+	\frac{V_2}{V_1} = 
+    \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}} =
+    \frac{1}{1 + j\omega R C}
+$$
+
+$$
+	T_{dB} = 
+    20 log|H(\omega)| = 
+    20 log(\frac{V_2}{V_1}) = 
+    20 log(\frac{1}{\sqrt{1 - (\omega R C)^2}}) = 
+    -10 log(1 - (\omega R C)^2)
+$$
+
+\paragraph{E para o cálculo da fase ($\Theta$)} foi usado a equação:
+
+$$
+	\Theta =
+    -arg(H(\omega)) =
+    -arctg(\omega R C) = 
+    -arctg(j(1 - \frac{V_1}{V_2})) 
+$$
+
+\paragraph{Com suas respectivas propagações de erros}
+
+$$
+	\sigma_{T_{dB}} = \pm
+    \sqrt{
+    	(-\frac{V_2}{V_1^2})^2 \sigma_{V_1}^2 +
+    	(\frac{1}{V_1})^2 \sigma_{V_2}^2
+    }
+$$
+
+$$
+	\sigma_\Theta = \pm
+    \sqrt{
+    	(\frac{V_2}{2 V_2 V_1 - V_1})^2 \sigma_{V_1}^2 +
+    	(\frac{1}{V_2 - 2 V_1})^2 \sigma_{V_2}^2 
+    }
+$$
+
+\subsubsection{Circuito RLC (Passa-Banda)}
+
+\paragraph{Para o cálculo de $T_{dB}$} foi usado a equação:
+
+$$
+	H(\omega) = 
+	\frac{V_2}{V_1} = 
+    \frac{j \omega R C}{1 + \omega^2 L C - j \omega R C} =
+    \frac{1}{1 - j\frac{1 - \omega^2 L C}{\omega R C}}
+$$
+
+$$
+	T_{dB} = 
+    20 log|H(\omega)| = 
+    20 log(\frac{1}{\sqrt{1 - (\frac{1 - \omega^2 L C}{\omega R C})^2}})
+$$
+
+\paragraph{E para o cálculo da fase ($\Theta$)} foi usado a equação:
+
+$$
+	\Theta =
+    -arctg(\frac{1 - \omega^2 L C}{\omega R C})
+$$
+
+\paragraph{Com suas respectivas propagações de erros}
+
+$$
+	\sigma_{T_{dB}} = \pm
+    \sqrt{
+    	(-\frac{V_2}{V_1^2})^2 \sigma_{V_1}^2 +
+    	(\frac{1}{V_1})^2 \sigma_{V_2}^2
+    }
+$$
+
+$$
+	\sigma_\Theta = \pm
+    \sqrt{
+    	(\frac{V_2}{2 V_2 V_1 - V_1})^2 \sigma_{V_1}^2 +
+    	(\frac{1}{V_2 - 2 V_1})^2 \sigma_{V_2}^2 
+    }
+$$
+
+\section{Resultados} 
+
+\begin{figure} [H] 
+    \centering
+    \pgfplotstableset{ 
+        columns/f/.style={
+            column name={$f [Hz]$},
+        },
+        columns/V1/.style={
+            column name={$V_1 [V]$},
+        },
+        columns/e_V1/.style={
+            column name={$\sigma_{V_1} [V]$},
+        },
+        columns/V2/.style={
+            column name={$V_2 [V]$},
+        },
+        columns/e_V2/.style={
+            column name={$\sigma_{V_2}[V]$},
+        },
+        columns/TdB/.style={
+            column name={$T [dB]$},
+        },
+        columns/e_TdB/.style={
+            column name={$\sigma_T [dB]$},
+        },
+        columns/fase/.style={
+            column name={$\Theta$},
+        },
+        columns/e_fase/.style={
+            column name={$\sigma_\Theta$},
+        },
+    }
+    \pgfplotstableread{data/passa-baixa.dat}\loadedtable
+    \pgfplotstabletypeset{\loadedtable}
+    \caption{Tabela do circuito passa baixa}
+    \label{fig:tbaixa}
+\end{figure}
+
+\begin{figure} [H] 
+    \centering
+    \pgfplotstableset{ 
+        columns/f/.style={
+            column name={$f [Hz]$},
+        },
+        columns/V1/.style={
+            column name={$V_1 [V]$},
+        },
+        columns/e_V1/.style={
+            column name={$\sigma_{V_1} [V]$},
+        },
+        columns/V2/.style={
+            column name={$V_2 [V]$},
+        },
+        columns/e_V2/.style={
+            column name={$\sigma_{V_2}[V]$},
+        },
+        columns/TdB/.style={
+            column name={$T [dB]$},
+        },
+        columns/e_TdB/.style={
+            column name={$\sigma_T [dB]$},
+        },
+        columns/fase/.style={
+            column name={$\Theta$},
+        },
+        columns/e_fase/.style={
+            column name={$\sigma_\Theta$},
+        },
+    }
+    \pgfplotstableread{data/passa-banda.dat}\loadedtable
+    \pgfplotstabletypeset{\loadedtable}
+    \caption{Tabela do circuito passa banda}
+    \label{fig:tbanda}
+\end{figure}
+
+\subsection{Diagramas de Bode}
+
+Para cada filtro, por meio do script em Python disponibilizado em laboratório, foi possível obter os gráficos da Transmitância (medida em decibéis) e da resposta em fase do circuito (medida em graus) (Diagrama de Bode). Para ambos os gráficos, coletamos 15 pontos.
+
+	\subsubsection{Passa Baixa}
+		\begin{figure} [H] 
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm,
+					xmode=log,
+					ylabel={$transmissão [dB]$},
+					xlabel style={below right},
+					ylabel style={above left},
+				]
+				\addplot [color=red, mark=o, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=f, y=TdB, y error=e_TdB]{data/passa-baixa.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm,
+					xmode=log,
+					xlabel={$frequência [Hz]$},
+					ylabel={$fase [\circ]$},
+					xlabel style={below right},
+					ylabel style={above left},
+				]
+				\addplot [color=cyan, mark=o, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=f, y=fase, y error=e_fase]{data/passa-baixa.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico de Bode do circuito passa-baixa}
+			\label{fig:graphD2}
+		\end{figure}
+	\subsubsection{Passa Banda}
+		\begin{figure} [H] 
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm,
+					xmode=log,
+					ylabel={$transmissão [dB]$},
+					xlabel style={below right},
+					ylabel style={above left},
+				]
+				\addplot [color=red, mark=o, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=f, y=TdB, y error=e_TdB]{data/passa-banda.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm,
+                    xmode=log,
+					xlabel={$frequência [Hz]$},
+					ylabel={$fase [\circ]$},
+					xlabel style={below right},
+					ylabel style={above left},
+				]
+				\addplot [color=cyan, mark=o, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=f, y=fase, y error=e_fase]{data/passa-banda.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico de Bode do circuito passa-banda}
+			\label{fig:graphD2}
+		\end{figure}
+        
+\section{Discussão}
+
+\subsection{Passa-baixa RC}
+
+O filtro passa-baixa RC possui, como função de transferência (H(W)), a seguinte expressão: $H(w) = \frac{1}{ 1 - jwRC}$ . Assim, a transmitância, em dB, é dada por $T = 20\log (\frac{1}{\sqrt{(1 + (wRC)^2}})$. A fase, por sua vez, é o dada por $\theta = -arctg(wRC)$ e a frequência de corte, dada por $f_{c} = \frac{1}{RC}$. A partir dessas expressões, é possível significar o que se passa no diagrama de Bode do filtro passa baixa: Para frequências maiores que a frequência de corte (w >> wc), ou seja, sinais de alta frequência o capacitor apresenta baixa reatância, XC << R e seu comportamento é o de um curto-circuito. Logo, grande parte da tensão de entrada
+estará sobre o resistor e a tensão sobre o capacitor de saída será quase nula. Assim, o circuitocimpede a passagem de sinais de alta frequência - o que é perceptível pela atenuação crescente após a frequencia de corte ($f_{c} = \frac{1}{RC} = 0,22.10^{-3} Hz$) na curva de transmitância. Por sua vez, para frequências menores que a frequência de corte, ($w << w_{c}$), o capacitor apresenta alta reatância, XC >> R e seu comportamento é o de um circuito aberto. Desta forma, grande parte da tensão de entrada estará sobre o capacitor de saída. Logo, o circuito deixa passar sinais
+de baixa frequência.  
+
+\subsection{Passa-banda RLC}
+
+O filtro passa-banda RLC possui, como função de transferência (H(w)), a seguinte expressão $H(w) =\frac{1}{1 -  (j\frac{1 - w^2LC}{wRC})}$. A transmitância, em dB, é dada por $T = 20 \log (\frac{1}{\sqrt{1 + \frac{1 - w^2LC}{wRC}^2}})$. A fase é dada por $\theta = arctg \frac{1 - w^2LC}{wRC}^2 $. No circuito passa baixa, temos duas frequências de corte e uma frequência central, dadas, respectivamente, por  $w_{c1} = \frac{-RC +- \sqrt{RC^2 + 4LC}}{2LC}  w_{c2} = \frac{+RC +- \sqrt{RC^2 + 4LC}}{2LC}  w_{central} = \sqrt{\frac{1}{LC}} $  . 
+Traduzindo esses conceitos para o diagrama de bode, temos que para frequências menores que a frequência de corte 1 ($w << w_{c1}$): o indutor do circuito da apresenta baixa reatância indutiva e tende a comportar-se como um curto-circuito, porém, o capacitor apresenta alta reatância capacitiva e tende a comportar-se como um circuito aberto. Desta forma, grande parte da tensão de entrada estará sobre o capacitor e a tensão sobre o resistor de saída será muito baixa, ou seja, o sinal será atenuado. Assim, o circuito impede a passagem de sinais de baixa frequência.
+
+Para frequências maiores que a frequência de corte 2 ($w >> w_{c2}$):  o capacitor apresenta baixa reatância capacitiva e comporta-se como um curto-circuito, porém, o indutor apresenta alta reatância indutiva e comporta-se como um circuito aberto. Desta forma, grande parte de tensão de entrada estará
+sobre o indutor e a tensão sobre o resistor de saída será muito baixa, ou seja, o sinal será atenuado. Portanto, o circuito impede a passagem de sinais de alta frequência.  
+
+Para sinais de frequências intermediárias, ou seja, sinais cujas frequências estiverem numa faixa
+próxima à frequência central do filtro, o indutor e o capacitor juntos apresentarão
+baixa reatância e tenderão a comportarem-se como um curto circuito. Desta forma, grande parte da tensão de entrada estará sobre o resistor de
+saída. Deste modo o circuito deixa passar sinais dentro de uma determinada faixa
+de frequência. 
+
+\section{Referências}
+
+Análise de Circuitos - Teoria e Prática - Vol. 2 -
+Miller,Wilhelm C. / Robbins,Allan H.
+        
+\end{document}
