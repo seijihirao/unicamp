@@ -3,14 +3,14 @@
 init:
     LOAD MQ,M(GRAVITY)
 
-loop:
     MUL M(x)
     LOAD MQ
     STOR M(y)
-    
+ 
     RSH
     STOR M(k)
 
+loop:
     LOAD M(cont)
     SUB M(UNIT)
     STOR M(cont)
@@ -33,7 +33,7 @@ loop:
 x:
     .word 0xDAC
 cont:
-    .word 0x9
+    .word 0xA
 k:
     .word 0x0
 y:
