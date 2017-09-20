@@ -1,0 +1,77 @@
+Lista de tokens
+Token 0
+	Tipo: 2
+	Palavra: vetor1:
+	Linha: 1
+Token 1
+	Tipo: 2
+	Palavra: vetor2:
+	Linha: 2
+Token 2
+	Tipo: 1
+	Palavra: .word
+	Linha: 2
+Token 3
+	Tipo: 4
+	Palavra: 10
+	Linha: 2
+Token 4
+	Tipo: 2
+	Palavra: vetor3:
+	Linha: 3
+Token 5
+	Tipo: 1
+	Palavra: .word
+	Linha: 3
+Token 6
+	Tipo: 4
+	Palavra: 10
+	Linha: 3
+Token 7
+	Tipo: 1
+	Palavra: .word
+	Linha: 5
+Token 8
+	Tipo: 4
+	Palavra: 10
+	Linha: 5
+Token 9
+	Tipo: 1
+	Palavra: .word
+	Linha: 6
+Token 10
+	Tipo: 4
+	Palavra: 10
+	Linha: 6
+Token 11
+	Tipo: 2
+	Palavra: vetor4:
+	Linha: 9
+Token 12
+	Tipo: 0
+	Palavra: ADD
+	Linha: 9
+Token 13
+	Tipo: 3
+	Palavra: 0x0000000100
+	Linha: 9
+Token 14
+	Tipo: 2
+	Palavra: vetor5:
+	Linha: 10
+Token 15
+	Tipo: 0
+	Palavra: ADD
+	Linha: 10
+Token 16
+	Tipo: 3
+	Palavra: 0x0000000100
+	Linha: 10
+Token 17
+	Tipo: 0
+	Palavra: ADD
+	Linha: 12
+Token 18
+	Tipo: 3
+	Palavra: 0x0000000100
+	Linha: 12
