@@ -31,5 +31,5 @@ $ python simplex.py -i meu_arquivo_teste.csv
 ## Help
 
 ```
-python simplex.py --help
+$ python simplex.py --help
 ```
