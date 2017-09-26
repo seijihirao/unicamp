@@ -1,0 +1,109 @@
+Lista de tokens
+Token 0
+	Tipo: 2
+	Palavra: inicio:
+	Linha: 1
+Token 1
+	Tipo: 0
+	Palavra: LOAD
+	Linha: 2
+Token 2
+	Tipo: 4
+	Palavra: 10
+	Linha: 2
+Token 3
+	Tipo: 0
+	Palavra: LOAD-
+	Linha: 3
+Token 4
+	Tipo: 4
+	Palavra: 10
+	Linha: 3
+Token 5
+	Tipo: 0
+	Palavra: LOAD|
+	Linha: 4
+Token 6
+	Tipo: 4
+	Palavra: 10
+	Linha: 4
+Token 7
+	Tipo: 0
+	Palavra: LOAD|
+	Linha: 5
+Token 8
+	Tipo: 4
+	Palavra: 10
+	Linha: 5
+Token 9
+	Tipo: 0
+	Palavra: LOADmq_mx
+	Linha: 6
+Token 10
+	Tipo: 4
+	Palavra: 10
+	Linha: 6
+Token 11
+	Tipo: 0
+	Palavra: STOR
+	Linha: 7
+Token 12
+	Tipo: 4
+	Palavra: 10
+	Linha: 7
+Token 13
+	Tipo: 0
+	Palavra: ADD
+	Linha: 8
+Token 14
+	Tipo: 5
+	Palavra: inicio
+	Linha: 8
+Token 15
+	Tipo: 0
+	Palavra: ADD|
+	Linha: 9
+Token 16
+	Tipo: 4
+	Palavra: 10
+	Linha: 9
+Token 17
+	Tipo: 0
+	Palavra: SUB
+	Linha: 10
+Token 18
+	Tipo: 3
+	Palavra: 0x000000000A
+	Linha: 10
+Token 19
+	Tipo: 0
+	Palavra: SUB|
+	Linha: 11
+Token 20
+	Tipo: 3
+	Palavra: 0x000000000A
+	Linha: 11
+Token 21
+	Tipo: 0
+	Palavra: MUL
+	Linha: 12
+Token 22
+	Tipo: 3
+	Palavra: 0x000000000A
+	Linha: 12
+Token 23
+	Tipo: 0
+	Palavra: DIV
+	Linha: 13
+Token 24
+	Tipo: 3
+	Palavra: 0x000000000A
+	Linha: 13
+Token 25
+	Tipo: 0
+	Palavra: LSH
+	Linha: 14
+Token 26
+	Tipo: 0
+	Palavra: RSH
+	Linha: 15

@@ -1,0 +1,25 @@
+Lista de tokens
+Token 0
+	Tipo: 1
+	Palavra: .set
+	Linha: 1
+Token 1
+	Tipo: 5
+	Palavra: VINTE
+	Linha: 1
+Token 2
+	Tipo: 4
+	Palavra: 20
+	Linha: 1
+Token 3
+	Tipo: 1
+	Palavra: .wfill
+	Linha: 2
+Token 4
+	Tipo: 4
+	Palavra: 50
+	Linha: 2
+Token 5
+	Tipo: 5
+	Palavra: VINTE
+	Linha: 2

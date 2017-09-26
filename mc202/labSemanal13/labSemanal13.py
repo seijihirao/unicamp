@@ -139,7 +139,7 @@ if __name__ == '__main__':
         seaborn.factorplot(data=plot(['bubblesort', 'insertsort'], 3, start_step=1, step=2), 
             x='size', y='time', units='subject', hue='kind', kind='bar')
 
-    plotCompareMin()
+    plotAlone()
 
     #
     # Show
