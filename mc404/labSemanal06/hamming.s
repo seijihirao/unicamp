@@ -190,9 +190,9 @@ decode:
     eor r5, r5, r6
     eor r5, r5, r9
     eor r5, r5, r10
-    eor r7, r6, r8
-    eor r7, r6, r9
-    eor r7, r6, r10
+    eor r7, r7, r8
+    eor r7, r7, r9
+    eor r7, r7, r10
 
     @ Storing Error
     mov r1, #0
