@@ -1,0 +1,411 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+%% Sets page size and margins
+\usepackage[
+	a4paper,
+    top=3cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    marginparwidth=1.75cm
+]{geometry}
+
+%%tabelas sofisticadas
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+
+%% Pacotes úteis
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure} %pacote para  subfiguras
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage{gensymb}
+
+%% Desenhando circuitos
+\usepackage{circuitikz}
+
+
+\title{Resposta temporal de circuito RC,  integradores e diferenciadores}
+\author{
+    Gustavo de Noraes Furtado (150653)
+    \and 
+	Guilherme Hasse Urel (157946)
+    \and
+	João Pedro de Amorim (176131)
+	\and 
+    Rodrigo Seiji Piubeli Hirao (186837)
+    }
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+No experimento a seguir, por meio de um circuito com um componente reativo (em nosso caso, C - ou seja, um circuito RC) e outro circuito do tipo RLC, verificamos a validade da utilização do primeiro circuito como uma calculadora analógica de integrais e derivadas e o segundo, utilizamos para a compreensão do regime de amortecimento frente à um degrau de tensão no circuito. A partir dos dados obtidos experimentalmente e da teoria que envolve o experimento, também foi possível estabelecer uma conexão entre tempo e frequência, sintetizando a análise de Fourier.
+\end{abstract}
+
+\section{Introdução}
+	Neste experimento, trataremos ainda sobre os circuitos do tipo RC e RLC (resistores, indutores e capacitores), todavia, agora, em uma análise de sua resposta transiente - e a partir dela, estabelecer a conexão entre essa resposta e a resposta em frequência (experimento anterior), realizando, assim, a conexão entre os domínios do tempo e frequência (em outras palavras, explicitando a análise de Fourier).
+	Na primeira parte do experimento, trataremos sobre a capacidade de circuitos envolvendo um elemento reativo (L ou C) de funcionar como calculadoras analógicas de integrais ou derivadas: ou seja, a partir de um sinal de entrada, o sinal de saída seria a integral ou derivada desse. Essa análise é necessária em diversos campos da indústria e da própria natureza, uma vez que os fenômenos de integração e diferenciação são muito recorrentes e esses circuitos conseguem determinar essas operações sob os operandos (sinais) de modo analítico e preciso. 
+    Já na segunda parte do experimento, estudaremos como um circuito RLC, após um transiente abrupto de tensão (degrau de tensão) se comporta até chegar no estado estacionário - caracterizando, assim, os regimes de amortecimento: subamortecido, criticamente amortecido e sobreamortecido. Essa análise é fundamental para o estudo de sistemas genéricos onde há uma mudança abrupta de estado: um exemplo, por exemplo, é o sistema de freios de um carro ou a reação da estrutura de uma superfície frente à um grande impacto.
+
+\section{Materiais e métodos}
+
+No experimento, para a montagem dos circuitos RC e RLC, utilizamos:
+
+\subsection{Componentes do circuito RC (integrador/diferenciador) e equipamentos:}
+
+\begin{itemize}
+\item \textbf{Resistor} -- Valor nominal: 320 $\Omega$
+\item \textbf{Capacitor} -- Valor nominal: 0,1 $\mu F$
+\item \textbf{Osciloscópio - modelo TDS200 Tektronix}
+\item \textbf{Gerador de Ondas - modelo 4052 BK Precision}
+\item \textbf{Cabo BNC-banana}
+\end{itemize}
+
+\subsection{Componentes do RLC e equipamentos:}
+
+\begin{itemize}
+	\item \textbf{Resistor} -- Valor nominal: 1 k$\Omega$
+	\item \textbf{Indutor} -- Valor nominal: 48,6 mH
+	\item \textbf{Capacitor} -- Valor nominal: 0,1 $\mu F$
+	\item \textbf{Osciloscópio - modelo TDS200 Tektronix}
+	\item \textbf{Gerador de Ondas - modelo 4052 BK Precision}
+	\item \textbf{Cabo BNC-banana}
+\end{itemize}
+
+\subsection{Circuitos utilizados:}
+
+\begin{figure} [H]
+\centering
+\begin{circuitikz}[scale=1]
+		\node (Xi) at (0.7,0.7) {$V_1$};
+		\node (Xf) at (3.7,0.7) {$V_2$};
+		\draw [semithick,->] (Xi) -- (0.1,0.1);
+		\draw [semithick,->] (Xf) -- (3.1,0.1);
+		\draw to [capacitor, o-o, l_=$R$] ++(2,0)
+			(2,0) to [short,o-o] ++(1,0)
+			(2,0) to [resistor, o-o, l=$C$] ++(0,-2)
+			node[ground] {};
+\end{circuitikz}
+\caption{Circuito RC para o filtro diferenciador}
+\label{fig:rc}
+\end{figure}
+
+\begin{figure} [H]
+\centering
+\begin{circuitikz}[scale=1]
+		\node (Xi) at (0.7,0.7) {$V_1$};
+		\node (Xf) at (3.7,0.7) {$V_2$};
+		\draw [semithick,->] (Xi) -- (0.1,0.1);
+		\draw [semithick,->] (Xf) -- (3.1,0.1);
+		\draw to [resistor, o-o, l_=$R$] ++(2,0)
+			(2,0) to [short,o-o] ++(1,0)
+			(2,0) to [capacitor, o-o, l=$C$] ++(0,-2)
+			node[ground] {};
+\end{circuitikz}
+\caption{Circuito RC para o filtro integrador}
+\label{fig:rc}
+\end{figure}
+
+\begin{figure} [H]
+\centering
+\begin{circuitikz}[scale=1]
+		\node (Xi) at (0.7,0.7) {$V_1$};
+		\node (Xf) at (5.7,0.7) {$V_2$};
+		\draw [semithick,->] (Xi) -- (0.1,0.1);
+		\draw [semithick,->] (Xf) -- (5.1,0.1);
+		\draw 
+        	(0,0) to [resistor, o-o, l_=$R$] ++(2,0)
+        	(2,0) to [capacitor, o-o, l_=$C$] ++(2,0)
+			(4,0) to [short,o-o] ++(1,0)
+			(4,0) to [inductor, o-o, l=$L$] ++(0,-2)
+			node[ground] {};
+\end{circuitikz}
+\caption{Circuito RLC em para análise do regime de amortecimento}
+\label{fig:rlc}
+\end{figure}
+
+\subsection{Cálculo}
+
+\subsubsection{Circuitos integradores e diferenciadores}
+
+\paragraph{Escolhemos} um $\omega_0$ próximo ao que queriamos e calculamos o R a partir disso.
+
+\paragraph{Para o cálculo de $R$} foi usado a equação:
+
+$$
+	R = \frac{1}{2 \pi \omega_0 C}
+$$
+$$
+	\sigma_R = 
+    \sqrt{
+    	\left( -\frac{1}{2\pi\omega_0 C^2} \right)^2 \sigma_C^2 +
+    	\left( -\frac{1}{2\pi\omega_0^2 C} \right)^2 \sigma_{\omega_0}^2
+    }
+$$
+
+\subsubsection{Circuitos para análise do regime de amortecimento}
+
+\paragraph{Para o cálculo de $\omega_0$} foi usado a equação:
+
+$$
+	\omega_0 = \frac{1}{\sqrt{C L} 2 \pi}
+$$
+$$
+	\sigma_{\omega_0} =
+    \sqrt{
+    	\left( -\frac{1}{\sqrt{C L^3} 4\pi} \right)^2 \sigma_C^2 +
+    	\left( -\frac{1}{\sqrt{C^3 L} 4\pi} \right)^2 \sigma_L^2
+    }
+$$
+
+\paragraph{Para o cálculo do fator de qualidade $Q$} foi usado a equação:
+
+$$
+	Q = \frac{\omega_0 L}{R}
+$$
+
+$$
+	\sigma_Q =
+    \sqrt{
+    	\left( \frac{L}{R} \right)^2 \sigma_{\omega_0}^2 +
+    	\left( \frac{\omega_0}{R} \right)^2 \sigma_{L}^2 +
+    	\left( -\frac{\omega_0 L}{R^2} \right)^2 \sigma_{R}^2
+    }
+$$
+
+\section{Resultados} 
+
+\subsection{Diagramas}
+	\subsubsection{Circuitos diferenciador e integrador}
+		\begin{figure} [H] 
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=5cm,
+					xlabel={$Tempo [s]$},
+					ylabel={Tensão $[V]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/dif-sin.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/dif-sin.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=5cm,
+					xlabel={$Tempo [s]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/dif-sqr.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/dif-sqr.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=5cm,
+					xlabel={$Tempo [s]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/dif-abr.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/dif-abr.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico do circuito diferenciador para diferentes ondas, 
+            sendo vermelho a saída e azul a entrada}
+			\label{fig:graphDif}
+		\end{figure}
+		\begin{figure} [H] 
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=5cm,
+					xlabel={$Tempo [s]$},
+					ylabel={Tensão $[V]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/int-sin.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/int-sin.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=5cm,
+					xlabel={$Tempo [s]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/int-sqr.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/int-sqr.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=5cm,
+					xlabel={$Tempo [s]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/int-abr.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/int-abr.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico do circuito integrador para diferentes ondas, 
+            sendo vermelho a saída e azul a entrada}
+			\label{fig:graphInt}
+		\end{figure}
+	\subsubsection{Circuitos amortecidos}
+		\begin{figure} [H] 
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm,
+					xlabel={$Tempo [s]$},
+					ylabel={Tensão $[V]$},
+					xlabel style={below},
+					ylabel style={above left},
+				]
+				\addplot [color=blue, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V1]{data/amt-sub.dat};
+				\addplot [color=red, smooth, ultra thick]
+					plot [error bars/.cd, y dir = both, y explicit]
+					table[x=t, y=V2]{data/amt-sub.dat};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico do circuito subamortecido, 
+            sendo vermelho a saída e azul a entrada}
+			\label{fig:graphAmt}
+		\end{figure}
+
+\section{Discussão}
+
+\subsection{Circuitos RC Integradores e Diferenciadores}
+
+A partir da aplicação da lei de Kirchhoff aos circuitos RC passa altas e passa baixas, podemos determinar a EDO que rege a corrente elétrica nos mesmos da seguinte forma:
+
+\begin{equation} \label{lei de kirchoff}
+R\frac{dq(t)}{dt}+\frac{q(t)}{C}=V_{1}(t)
+\end{equation}
+
+Explicitando as tensões de saída na equação (\ref{lei de kirchoff}) para cada um dos circuitos, passa altas e passa baixas, respectivamente, obtemos:
+
+\begin{equation} \label{queda de tensao passa altas}
+V_{2}(t)=Ri(t)=R\frac{dq(t')}{dt'}
+\end{equation}
+\begin{equation} \label{queda de tensao passa baixas}
+V_{2}(t)=\frac{q(t)}{C}=\frac{1}{C}\int i(t')dt'
+\end{equation}
+
+Para altas frequências, quando comparadas à frequência de corte do circuito, a queda de tensão no capacitor pode ser desprezada, devido ao fato de que as cargas não encontram tempo hábil para acumulação nos terminais do mesmo. No circuito passa baixas, a implicação disso é de que 
+a queda de tensão no capacitor pode ser despreazada para o cálculo da corrente. Já para baixas frequências, em um circuito passa altas, o tempo de carregamento do capacitor é muito baixo e dessa forma a tensão no mesmo pode ser aproximada pela própria tensão de entrada do circuito. Essas duas aproximações podem ser escritas da seguinte forma:
+\begin{equation} \label{aproximacao capacitor 1}
+\frac{dq(t)}{dt}\approx C\frac{dV_{1}(t)}{dt}
+\end{equation}
+\begin{equation} \label{aproximacao capacitor 2}
+\frac{dq(t)}{dt}=i(t)\approx \frac{V_{1}(t)}{R}
+\end{equation}
+
+Aplicando às aproximações (\ref{aproximacao capacitor 1}) e (\ref{aproximacao capacitor 2}) nas equações (\ref{queda de tensao passa altas}) e (\ref{queda de tensao passa baixas}), respectivamente, obtemos: 
+
+\begin{equation} \label{circuito derivador}
+V_{2}(t)=RC\frac{dV_{1}(t)}{dt} 
+\end{equation}
+\begin{equation} \label{circuito integrador}
+V_{2}(t)=\frac{1}{RC}\int V_{1}(t)
+\end{equation}
+
+Essas relações explicam como os filtros RC podem funcionar como diferenciadores e integradores analógicos do sinal de entrada. O procedimento experimental empregado envolveu a análise de três sinais de entrada distintos: função senoidal, função de onda quadrada e função de Lorentz. Aplicando as equções (\ref{circuito derivador}) e (\ref{circuito integrador}) a esses sinais de entrada, podemos estabelecer uma comparação entre o sinal de saída esperado e o obtido experimentalmente. 
+\newline
+\newline
+Diferenciação Função Senoidal:
+\begin{equation*} 
+V_{2}(t)=RC\frac{dV_{1}(t)}{dt}=RC\frac{d\sin(\omega t)}{dt} 
+\end{equation*}
+\begin{equation} 
+V_{2}(t)=RC\sin(\omega t)
+\end{equation}
+Integração Função Senoidal:
+\begin{equation*} 
+V_{2}(t)=\frac{1}{RC}\int V_{1}(t)=\frac{1}{RC}\int \sin(\omega t)
+\end{equation*}
+\begin{equation*} 
+V_{2}(t)=\frac{-1}{RC}\cos(\omega t)
+\end{equation*}
+Como podemos observar nos gráficos da figura 5, de fato o sinal de saída se comporta como o esperado para os dois casos: uma função do tipo cosseno, que pode ser interpretada como uma função seno desfasada, com um fator de atenuação dado pelas propriedades R e C de acordo com as equações (\ref{circuito derivador}) e (\ref{circuito integrador}). 
+De forma análoga podemos analisar o sinal de entrada na forma de uma onda quadrada. Para fins de simplificação apresentaremos apenas a dedução do sinal de saída para a região constante e positiva da onda:
+\newline
+\newline
+Diferenciação Função de Onda Quadrada:
+\begin{equation*} 
+V_{2}(t)=RC\frac{dV_{1}(t)}{dt}=RC\frac{K}{dt} 
+\end{equation*}
+\begin{equation} 
+V_{2}(t)=0
+\end{equation}
+Integração Função de Onda Quadrada:
+\begin{equation*} 
+V_{2}(t)=\frac{1}{RC}\int V_{1}(t)=\frac{1}{RC}\int K
+\end{equation*}
+\begin{equation*} 
+V_{2}(t)=\frac{Kt}{RC}
+\end{equation*}
+Mais uma vez podemos ver a coerência entre o modelo esperado e o obtido experimentalmente. O sinal de entrada na forma de uma onda quadrada apresentou um sinal de saída na forma triangular para o circuito integrador e nulo para o circuito diferenciador, com excessão das regiões de degrau onde o sinal apresenta um pico de acordo com o esperado. De forma análoga, o sinal de entrada da função de Lorentz apresenta coerência com o esperado, entretanto, sua dedução será suprimida. Por fim vale ressaltar que os integradores e diferenciadores analógicos possuem uma limitação de aplicação intrínseca, no que diz respeito a faixa de frequências dos sinais de entrada (circuitos diferenciadores trabalhando em baixas frequências e integradores em altas frequências) além de fatores de atenuação que devem ser considerados em sua aplicação, dados pela natureza dos componentes R e C. 
+
+\subsection{Análise do Regime Transiente}
+Circuitos do tipo RLC ressonantes podem ser estudados a partir da aplicação da lei de Kirchoff originando a seguinte equação diferencial:
+
+\begin{equation}
+\frac{d^2q(t)}{dt^2}+2\gamma \frac{dq(t)}{dt}+\omega_{0}^2q(t)=V_{1}(t)/R
+\end{equation}
+
+O comportamento dos mesmos pode ser entendido a partir da resposta transiente que apresentam quando submetidos a um sinal de entrada. A análise da figura 6 nos mostra que o circuito estudado no experimento apresenta características de subamortecimento, ou seja, o circuito oscila enquanto enquanto dissipa energia. 
+
+
+
+  \section{Referências}
+
+  Análise de Circuitos - Teoria e Prática - Vol. 2 -
+  Miller,Wilhelm C. / Robbins,Allan H.
+        
+\end{document}
