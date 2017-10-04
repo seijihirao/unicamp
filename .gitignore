@@ -1,3 +1,6 @@
+# build files
+*.img
+
 # private files
 .config/eduroam/cat_installer.conf
 .config/reveal.js/
@@ -11,3 +14,7 @@ other/
 *.aux
 node_modules
 octave-workspace
+
+# Specific files
+main
+hamming
