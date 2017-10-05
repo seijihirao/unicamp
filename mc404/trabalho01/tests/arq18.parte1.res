@@ -1,0 +1,21 @@
+Lista de tokens
+Token 0
+	Tipo: 0
+	Palavra: RSH
+	Linha: 1
+Token 1
+	Tipo: 2
+	Palavra: algo:
+	Linha: 2
+Token 2
+	Tipo: 1
+	Palavra: .set
+	Linha: 2
+Token 3
+	Tipo: 5
+	Palavra: DEZ
+	Linha: 2
+Token 4
+	Tipo: 4
+	Palavra: 10
+	Linha: 2
