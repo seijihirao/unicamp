@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <regex.h>
 #include <string.h>
+#include <ctype.h>
 
 /*
  * Remove white spaces on start and end of string
@@ -72,12 +73,12 @@ int processarEntrada(char* entrada, unsigned tamanho)
     // The groups are the ones found in the token_type variable
     regex_t regex;
     regmatch_t regexMatches[num_lines];
-    char* regex_string = "[ \t]*([^0-9 :#\n][^ #:\n]*[:])?[ \t]*([.][^0-9 #\n][^ #\n]*)?[ \t]*([A-Z]*)?([a-zA-Z_]+[ \t\n])?[ \t]*([0-9xA-F\"]+[^a-zA-Z:_\n])?[ \t]*([0-9xA-F\"]+[^a-zA-Z:_\n])?[ \t]*([^ \t#\n]+)?[ \t]*[^\n]*";
+    char* regex_string = "[ \t]*([^0-9 :#\\.\n][^ #:\n]*[:])?[ \t]*([.][^0-9 #\n][^ #\n]*)?[ \t]*([A-Z][^ #\\.:\n\t]*)?[ \t]*(\"?[a-zA-Z_]+\"?)?[ \t]*(\"?-?[x0-9A-F]{1,14}\"?|\"?[^0-9 :#\\.\n][^ #:\n]*\"?)?[ \t]*(\"?-?[x0-9A-F]{1,14}\"?|\"?[^0-9 :#\\.\n][^ #:\n]*\"?)?[ \t]*([^ \t#\n]+)?[ \t]*[^\n]*";
     // Compile regex
     if(regcomp(&regex, regex_string, REG_EXTENDED)) {
         printf("Error while compiling regex\n");
         return 1;
-    } 
+    }
 
     // Used to match the error group, 
     // to know if it was a lexic or gramatical error
@@ -107,50 +108,75 @@ int processarEntrada(char* entrada, unsigned tamanho)
         for (unsigned int g = 1; g < num_groups; g++){
             int start = regexMatches[g].rm_so;
             int end = regexMatches[g].rm_eo;
-
-            if(start == end){
+            
+            if(start >= end){
                 continue;
             }
-            
+
             token.tipo = token_type[g];
             token.linha = m + 1;
             token.palavra = (char*)malloc((end-start)*sizeof(char));
             switch(g){
                 //Rotule
                 case 1:
-                    strncpy(token.palavra, cursor + start, end-start-1);
-                    token.palavra[end-start-1] = '\0';
+                    strncpy(token.palavra, cursor + start, end-start);
+                    token.palavra[end-start] = '\0';
                     break;
                 //Directive
                 case 2:
-                    if(regexMatches[2].rm_eo - regexMatches[2].rm_so){
+                    // ERROR 
+                    // ".set" needs symbol and number or name
+                    if(!strncmp(".set", cursor+start, end-start) &&
+                    (!(regexMatches[3].rm_eo - regexMatches[3].rm_so) ||
+                    !((regexMatches[4].rm_eo - regexMatches[4].rm_so) || (regexMatches[5].rm_eo - regexMatches[5].rm_so)))){
                         goto error_gramatic;
                     }
-                    strncpy(token.palavra, cursor + start + 1, end-start-1);
-                    token.palavra[end-start-1] = '\0';
+                    strncpy(token.palavra, cursor + start, end-start);
+                    token.palavra[end-start] = '\0';
                     break;
                 //Instruction
                 case 3:
-                    if(regexMatches[2].rm_eo - regexMatches[2].rm_so){
-                        goto error_gramatic;
+                    if(regexMatches[2].rm_eo - regexMatches[2].rm_so){    
+                        token.tipo = Nome;
                     }
                     strncpy(token.palavra, cursor + start, end-start);
                     token.palavra[end-start] = '\0';
                     break;
                 //Name
                 case 4:
+                    // ERROR 
+                    // Using number or name without directive or instruction
                     if(!((regexMatches[2].rm_eo - regexMatches[2].rm_so) || (regexMatches[3].rm_eo - regexMatches[3].rm_so))){
                         goto error_gramatic;
                     }
+                    
+                    // Nice, Go on
                     strncpy(token.palavra, cursor + start, end-start);
                     token.palavra[end-start] = '\0';
                     break;
                 //Number (1)
-                case 5:
+                case 5: {
+                    // ERROR 
+                    // Using number or name without directive or instruction
                     if(!((regexMatches[2].rm_eo - regexMatches[2].rm_so) || (regexMatches[3].rm_eo - regexMatches[3].rm_so))){
                         goto error_gramatic;
                     }
-                    if(cursor[start+1] == 'x'){
+                     
+                    // ERROR
+                    // Some directives don't support negative numbers
+                    int dir_end   = regexMatches[2].rm_eo;
+                    int dir_start = regexMatches[2].rm_so;
+                    if(dir_end - dir_start){
+                        if((cursor[start] == '-' || cursor[start+1] == '-') &&
+                        (strncmp(".set", cursor+dir_start, dir_end-dir_start) ||
+                        strncmp(".align", cursor+dir_start, dir_end-dir_start) ||
+                        strncmp(".wfill", cursor+dir_start, dir_end-dir_start))){
+                            goto error_gramatic;
+                        }
+                    }
+                    
+                    // Nice, Go on
+                    if(cursor[start+1] == 'x' || cursor[start+2] == 'x'){
                         token.tipo = Hexadecimal;
                     }else{
                         token.tipo = Decimal;
@@ -158,9 +184,14 @@ int processarEntrada(char* entrada, unsigned tamanho)
                     strncpy(token.palavra, cursor + start, end-start);
                     token.palavra[end-start] = '\0';
                     break;
+                }
                 //Number (2)
                 case 6:
-                    if(cursor[start+1] == 'x'){
+                    if(isalpha(cursor[start]) || 
+                    (cursor[start] == '"' && isalpha(cursor[start+1]))){
+                        token.tipo = Nome;
+                    }
+                    else if(cursor[start+1] == 'x' || cursor[start+2] == 'x'){
                         token.tipo = Hexadecimal;
                     }else{
                         token.tipo = Decimal;
@@ -173,11 +204,17 @@ int processarEntrada(char* entrada, unsigned tamanho)
                  *
                  * Regex caught something that should not be found
                  */
-                case 7:
-                    printf("");
+                case 7: {
                     char test[end-start];
                     strncpy(test, cursor + start, end-start);
                     test[end-start] = '\0';
+                    
+                    // Special case when matched ":"
+                    // May be "rot:" for gramatic error
+                    // Or "rot :" for lexic error
+                    if((cursor[end-1] == ':') && end >= 2 && isalpha(cursor[end-2])){
+                        goto error_gramatic;
+                    }
 
                     if(!regexec(&regex_allowed, test, 1, dummy, 0)){
                         goto error_gramatic;
@@ -185,9 +222,10 @@ int processarEntrada(char* entrada, unsigned tamanho)
                         goto error_lexic;
                     }
                     break;
+                }
             }
             token.palavra = strtrim(token.palavra);
-
+            
             if(token.palavra[0] == '"'){
                 token.palavra++;
             }
@@ -197,13 +235,10 @@ int processarEntrada(char* entrada, unsigned tamanho)
                     break;
                 }
             }
-
             adicionarToken(token);
         }
         cursor = strchr(cursor, '\n') + 1;
     }
-
-    imprimeListaTokens();
 
     regfree(&regex);
 
