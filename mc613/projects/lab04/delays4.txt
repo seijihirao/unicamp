@@ -1,0 +1,71 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 8.070 
+
+Tcl Command:
+    report_path -multi_corner -file /home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays4.txt -panel_name {Report Path} -from [get_keepers {cin x[0] x[1] x[2] x[3] y[0] y[1] y[2] y[3]}] -to [get_keepers {cout overflow r[0] r[1] r[2] r[3]}] -npaths 1
+
+Options:
+    -from [get_keepers {cin x[0] x[1] x[2] x[3] y[0] y[1] y[2] y[3]}] 
+    -to [get_keepers {cout overflow r[0] r[1] r[2] r[3]}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "/home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays4.txt" 
+
+Delay Model:
+    Slow 1100mV 85C Model
+
++-----------------------------+
+; Summary of Paths            ;
++-------+-----------+---------+
+; Delay ; From Node ; To Node ;
++-------+-----------+---------+
+; 8.070 ; x[1]      ; r[3]    ;
++-------+-----------+---------+
+
+Path #1: Delay is 8.070
+===============================================================================
++-------------------+
+; Path Summary      ;
++-----------+-------+
+; Property  ; Value ;
++-----------+-------+
+; From Node ; x[1]  ;
+; To Node   ; r[3]  ;
+; Delay     ; 8.070 ;
++-----------+-------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 8.070 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 3     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  IC                    ;       ; 4     ; 3.283       ; 41         ; 0.000 ; 2.123 ;
+;  Cell                  ;       ; 5     ; 4.787       ; 59         ; 0.000 ; 2.845 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                         ;
++---------+---------+----+------+--------+---------------------+----------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location            ; Element                    ;
++---------+---------+----+------+--------+---------------------+----------------------------+
+; 8.070   ; 8.070   ;    ;      ;        ;                     ; data path                  ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_AA26            ; x[1]                       ;
+;   0.000 ;   0.000 ; FF ; IC   ; 1      ; IOIBUF_X89_Y23_N4   ; x[1]~input|i               ;
+;   0.984 ;   0.984 ; FF ; CELL ; 2      ; IOIBUF_X89_Y23_N4   ; x[1]~input|o               ;
+;   3.107 ;   2.123 ; FF ; IC   ; 1      ; LABCELL_X88_Y21_N42 ; \ripple:1:add|cout|dataa   ;
+;   3.589 ;   0.482 ; FF ; CELL ; 4      ; LABCELL_X88_Y21_N42 ; \ripple:1:add|cout|combout ;
+;   3.776 ;   0.187 ; FF ; IC   ; 1      ; LABCELL_X88_Y21_N54 ; \ripple:3:add|r|datab      ;
+;   4.252 ;   0.476 ; FF ; CELL ; 1      ; LABCELL_X88_Y21_N54 ; \ripple:3:add|r|combout    ;
+;   5.225 ;   0.973 ; FF ; IC   ; 1      ; IOOBUF_X89_Y25_N56  ; r[3]~output|i              ;
+;   8.070 ;   2.845 ; FF ; CELL ; 1      ; IOOBUF_X89_Y25_N56  ; r[3]~output|o              ;
+;   8.070 ;   0.000 ; FF ; CELL ; 0      ; PIN_AC30            ; r[3]                       ;
++---------+---------+----+------+--------+---------------------+----------------------------+
+
+

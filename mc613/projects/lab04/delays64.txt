@@ -1,0 +1,119 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 37.937 
+
+Tcl Command:
+    report_path -multi_corner -file /home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays64.txt -panel_name {Report Path} -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] x[13] x[14] x[15] x[16] x[17] x[18] x[19] x[20] x[21] x[22] x[23] x[24] x[25] x[26] x[27] x[28] x[29] x[30] x[31] x[32] x[33] x[34] x[35] x[36] x[37] x[38] x[39] x[40] x[41] x[42] x[43] x[44] x[45] x[46] x[47] x[48] x[49] x[50] x[51] x[52] x[53] x[54] x[55] x[56] x[57] x[58] x[59] x[60] x[61] x[62] x[63] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7] y[8] y[9] y[10] y[11] y[12] y[13] y[14] y[15] y[16] y[17] y[18] y[19] y[20] y[21] y[22] y[23] y[24] y[25] y[26] y[27] y[28] y[29] y[30] y[31] y[32] y[33] y[34] y[35] y[36] y[37] y[38] y[39] y[40] y[41] y[42] y[43] y[44] y[45] y[46] y[47] y[48] y[49] y[50] y[51] y[52] y[53] y[54] y[55] y[56] y[57] y[58] y[59] y[60] y[61] y[62] y[63]}] -to [get_keepers {cout overflow r[0] r[1] r[2] r[3] r[4] r[5] r[6] r[7] r[8] r[9] r[10] r[11] r[12] r[13] r[14] r[15] r[16] r[17] r[18] r[19] r[20] r[21] r[22] r[23] r[24] r[25] r[26] r[27] r[28] r[29] r[30] r[31] r[32] r[33] r[34] r[35] r[36] r[37] r[38] r[39] r[40] r[41] r[42] r[43] r[44] r[45] r[46] r[47] r[48] r[49] r[50] r[51] r[52] r[53] r[54] r[55] r[56] r[57] r[58] r[59] r[60] r[61] r[62] r[63]}] -npaths 1
+
+Options:
+    -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] x[13] x[14] x[15] x[16] x[17] x[18] x[19] x[20] x[21] x[22] x[23] x[24] x[25] x[26] x[27] x[28] x[29] x[30] x[31] x[32] x[33] x[34] x[35] x[36] x[37] x[38] x[39] x[40] x[41] x[42] x[43] x[44] x[45] x[46] x[47] x[48] x[49] x[50] x[51] x[52] x[53] x[54] x[55] x[56] x[57] x[58] x[59] x[60] x[61] x[62] x[63] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7] y[8] y[9] y[10] y[11] y[12] y[13] y[14] y[15] y[16] y[17] y[18] y[19] y[20] y[21] y[22] y[23] y[24] y[25] y[26] y[27] y[28] y[29] y[30] y[31] y[32] y[33] y[34] y[35] y[36] y[37] y[38] y[39] y[40] y[41] y[42] y[43] y[44] y[45] y[46] y[47] y[48] y[49] y[50] y[51] y[52] y[53] y[54] y[55] y[56] y[57] y[58] y[59] y[60] y[61] y[62] y[63]}] 
+    -to [get_keepers {cout overflow r[0] r[1] r[2] r[3] r[4] r[5] r[6] r[7] r[8] r[9] r[10] r[11] r[12] r[13] r[14] r[15] r[16] r[17] r[18] r[19] r[20] r[21] r[22] r[23] r[24] r[25] r[26] r[27] r[28] r[29] r[30] r[31] r[32] r[33] r[34] r[35] r[36] r[37] r[38] r[39] r[40] r[41] r[42] r[43] r[44] r[45] r[46] r[47] r[48] r[49] r[50] r[51] r[52] r[53] r[54] r[55] r[56] r[57] r[58] r[59] r[60] r[61] r[62] r[63]}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "/home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays64.txt" 
+
+Delay Model:
+    Slow 1100mV 85C Model
+
++-------------------------------+
+; Summary of Paths              ;
++--------+-----------+----------+
+; Delay  ; From Node ; To Node  ;
++--------+-----------+----------+
+; 37.937 ; y[1]      ; overflow ;
++--------+-----------+----------+
+
+Path #1: Delay is 37.937
+===============================================================================
++----------------------+
+; Path Summary         ;
++-----------+----------+
+; Property  ; Value    ;
++-----------+----------+
+; From Node ; y[1]     ;
+; To Node   ; overflow ;
+; Delay     ; 37.937   ;
++-----------+----------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 37.937 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 27    ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  IC                    ;        ; 28    ; 24.825      ; 65         ; 0.000 ; 4.788 ;
+;  Cell                  ;        ; 29    ; 13.112      ; 35         ; 0.000 ; 2.852 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                             ;
++----------+---------+----+------+--------+---------------------+-------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location            ; Element                       ;
++----------+---------+----+------+--------+---------------------+-------------------------------+
+; 37.937   ; 37.937  ;    ;      ;        ;                     ; data path                     ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_AG16            ; y[1]                          ;
+;   0.000  ;   0.000 ; RR ; IC   ; 1      ; IOIBUF_X50_Y0_N75   ; y[1]~input|i                  ;
+;   0.723  ;   0.723 ; RR ; CELL ; 2      ; IOIBUF_X50_Y0_N75   ; y[1]~input|o                  ;
+;   5.511  ;   4.788 ; RR ; IC   ; 1      ; MLABCELL_X39_Y1_N36 ; \ripple:1:add|cout|datac      ;
+;   5.864  ;   0.353 ; RR ; CELL ; 4      ; MLABCELL_X39_Y1_N36 ; \ripple:1:add|cout|combout    ;
+;   6.144  ;   0.280 ; RR ; IC   ; 1      ; MLABCELL_X39_Y1_N0  ; \ripple:4:add|cout~1|datac    ;
+;   6.500  ;   0.356 ; RR ; CELL ; 3      ; MLABCELL_X39_Y1_N0  ; \ripple:4:add|cout~1|combout  ;
+;   6.740  ;   0.240 ; RR ; IC   ; 1      ; MLABCELL_X39_Y1_N42 ; \ripple:6:add|cout|dataa      ;
+;   7.237  ;   0.497 ; RF ; CELL ; 3      ; MLABCELL_X39_Y1_N42 ; \ripple:6:add|cout|combout    ;
+;   7.455  ;   0.218 ; FF ; IC   ; 1      ; MLABCELL_X39_Y1_N24 ; \ripple:9:add|cout~1|datad    ;
+;   7.844  ;   0.389 ; FR ; CELL ; 2      ; MLABCELL_X39_Y1_N24 ; \ripple:9:add|cout~1|combout  ;
+;   8.803  ;   0.959 ; RR ; IC   ; 1      ; MLABCELL_X28_Y1_N54 ; \ripple:11:add|cout|datad     ;
+;   9.265  ;   0.462 ; RF ; CELL ; 3      ; MLABCELL_X28_Y1_N54 ; \ripple:11:add|cout|combout   ;
+;   9.446  ;   0.181 ; FF ; IC   ; 1      ; MLABCELL_X28_Y1_N48 ; \ripple:14:add|cout~1|dataa   ;
+;   9.913  ;   0.467 ; FR ; CELL ; 2      ; MLABCELL_X28_Y1_N48 ; \ripple:14:add|cout~1|combout ;
+;   10.130 ;   0.217 ; RR ; IC   ; 1      ; MLABCELL_X28_Y1_N24 ; \ripple:16:add|cout|dataf     ;
+;   10.217 ;   0.087 ; RF ; CELL ; 3      ; MLABCELL_X28_Y1_N24 ; \ripple:16:add|cout|combout   ;
+;   12.308 ;   2.091 ; FF ; IC   ; 1      ; LABCELL_X70_Y1_N54  ; \ripple:19:add|cout~1|datac   ;
+;   12.661 ;   0.353 ; FR ; CELL ; 2      ; LABCELL_X70_Y1_N54  ; \ripple:19:add|cout~1|combout ;
+;   12.855 ;   0.194 ; RR ; IC   ; 1      ; LABCELL_X70_Y1_N36  ; \ripple:21:add|cout|dataa     ;
+;   13.359 ;   0.504 ; RF ; CELL ; 3      ; LABCELL_X70_Y1_N36  ; \ripple:21:add|cout|combout   ;
+;   13.565 ;   0.206 ; FF ; IC   ; 1      ; LABCELL_X70_Y1_N24  ; \ripple:24:add|cout~1|dataa   ;
+;   14.048 ;   0.483 ; FR ; CELL ; 2      ; LABCELL_X70_Y1_N24  ; \ripple:24:add|cout~1|combout ;
+;   15.944 ;   1.896 ; RR ; IC   ; 1      ; MLABCELL_X15_Y1_N42 ; \ripple:26:add|cout|dataf     ;
+;   16.032 ;   0.088 ; RF ; CELL ; 3      ; MLABCELL_X15_Y1_N42 ; \ripple:26:add|cout|combout   ;
+;   16.222 ;   0.190 ; FF ; IC   ; 1      ; MLABCELL_X15_Y1_N36 ; \ripple:29:add|cout~1|dataf   ;
+;   16.309 ;   0.087 ; FR ; CELL ; 3      ; MLABCELL_X15_Y1_N36 ; \ripple:29:add|cout~1|combout ;
+;   16.542 ;   0.233 ; RR ; IC   ; 1      ; MLABCELL_X15_Y1_N48 ; \ripple:31:add|cout|datac     ;
+;   16.973 ;   0.431 ; RF ; CELL ; 3      ; MLABCELL_X15_Y1_N48 ; \ripple:31:add|cout|combout   ;
+;   19.464 ;   2.491 ; FF ; IC   ; 1      ; LABCELL_X83_Y1_N18  ; \ripple:34:add|cout~1|datab   ;
+;   19.951 ;   0.487 ; FR ; CELL ; 2      ; LABCELL_X83_Y1_N18  ; \ripple:34:add|cout~1|combout ;
+;   20.170 ;   0.219 ; RR ; IC   ; 1      ; LABCELL_X83_Y1_N0   ; \ripple:36:add|cout|dataf     ;
+;   20.253 ;   0.083 ; RF ; CELL ; 3      ; LABCELL_X83_Y1_N0   ; \ripple:36:add|cout|combout   ;
+;   21.128 ;   0.875 ; FF ; IC   ; 1      ; MLABCELL_X84_Y4_N18 ; \ripple:39:add|cout~1|datab   ;
+;   21.599 ;   0.471 ; FR ; CELL ; 3      ; MLABCELL_X84_Y4_N18 ; \ripple:39:add|cout~1|combout ;
+;   21.828 ;   0.229 ; RR ; IC   ; 1      ; MLABCELL_X84_Y4_N6  ; \ripple:41:add|cout|datac     ;
+;   22.256 ;   0.428 ; RF ; CELL ; 3      ; MLABCELL_X84_Y4_N6  ; \ripple:41:add|cout|combout   ;
+;   22.468 ;   0.212 ; FF ; IC   ; 1      ; MLABCELL_X84_Y4_N54 ; \ripple:44:add|cout~1|datad   ;
+;   22.857 ;   0.389 ; FR ; CELL ; 2      ; MLABCELL_X84_Y4_N54 ; \ripple:44:add|cout~1|combout ;
+;   23.859 ;   1.002 ; RR ; IC   ; 1      ; LABCELL_X88_Y16_N12 ; \ripple:46:add|cout|datac     ;
+;   24.284 ;   0.425 ; RF ; CELL ; 4      ; LABCELL_X88_Y16_N12 ; \ripple:46:add|cout|combout   ;
+;   24.471 ;   0.187 ; FF ; IC   ; 1      ; LABCELL_X88_Y16_N6  ; \ripple:49:add|cout~1|datab   ;
+;   24.958 ;   0.487 ; FR ; CELL ; 3      ; LABCELL_X88_Y16_N6  ; \ripple:49:add|cout~1|combout ;
+;   25.165 ;   0.207 ; RR ; IC   ; 1      ; LABCELL_X88_Y16_N24 ; \ripple:51:add|cout|datab     ;
+;   25.663 ;   0.498 ; RF ; CELL ; 4      ; LABCELL_X88_Y16_N24 ; \ripple:51:add|cout|combout   ;
+;   26.378 ;   0.715 ; FF ; IC   ; 1      ; LABCELL_X88_Y13_N24 ; \ripple:54:add|cout~1|datae   ;
+;   26.572 ;   0.194 ; FR ; CELL ; 3      ; LABCELL_X88_Y13_N24 ; \ripple:54:add|cout~1|combout ;
+;   26.774 ;   0.202 ; RR ; IC   ; 1      ; LABCELL_X88_Y13_N12 ; \ripple:56:add|cout|dataa     ;
+;   27.277 ;   0.503 ; RF ; CELL ; 4      ; LABCELL_X88_Y13_N12 ; \ripple:56:add|cout|combout   ;
+;   30.652 ;   3.375 ; FF ; IC   ; 1      ; MLABCELL_X59_Y1_N30 ; \ripple:59:add|cout~1|dataf   ;
+;   30.739 ;   0.087 ; FR ; CELL ; 3      ; MLABCELL_X59_Y1_N30 ; \ripple:59:add|cout~1|combout ;
+;   30.976 ;   0.237 ; RR ; IC   ; 1      ; MLABCELL_X59_Y1_N42 ; \ripple:61:add|cout|datad     ;
+;   31.438 ;   0.462 ; RF ; CELL ; 4      ; MLABCELL_X59_Y1_N42 ; \ripple:61:add|cout|combout   ;
+;   31.625 ;   0.187 ; FF ; IC   ; 1      ; MLABCELL_X59_Y1_N48 ; overflow~0|datab              ;
+;   32.091 ;   0.466 ; FF ; CELL ; 1      ; MLABCELL_X59_Y1_N48 ; overflow~0|combout            ;
+;   35.085 ;   2.994 ; FF ; IC   ; 1      ; IOOBUF_X54_Y0_N36   ; overflow~output|i             ;
+;   37.937 ;   2.852 ; FF ; CELL ; 1      ; IOOBUF_X54_Y0_N36   ; overflow~output|o             ;
+;   37.937 ;   0.000 ; FF ; CELL ; 0      ; PIN_AJ16            ; overflow                      ;
++----------+---------+----+------+--------+---------------------+-------------------------------+
+
+
