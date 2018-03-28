@@ -21,6 +21,7 @@ octave-workspace
 **/incremental_db/
 **/output_files/
 **/simulation/
+**/db/
 *.sdc
 *.qpf
 *.qsf
