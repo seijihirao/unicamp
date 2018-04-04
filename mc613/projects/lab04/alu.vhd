@@ -44,7 +44,7 @@ begin
 		y			=> b_base_1,
 		r			=>	sum_result,
 		cin		=>	cin,
-		overflow	=> overflow,
+		overflow	=> overflow, 
 		cout		=> carryout
 	);
 	
