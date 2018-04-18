@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{dirtytalk}
+\usepackage{url}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\geometry{margin=1in}
+
+\title{Projeto EA997 - Electrical Muscle Stimulation}
+\author{
+    Rodrigo Seiji Piubeli Hirao - 186837
+}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \abstract{
+        O projeto visa criar um aparelho que irá aplicar uma certa corrente
+        no braço afim de controlar seu movimento.
+    }
+    \section{Introdução}
+        EMS (Eletrical Muscle Stimulation) ou 
+        NMES (Neuromuscular Eletrical Stimulation) consiste em
+        um sistema que produz uma corrente em uma fibra muscular contraindo-a.
+        
+        Atualmente sua aplicação está ligada a:
+        \begin{itemize}
+             \item treino de musculatura
+             \item rehabilitação
+             \item testar o funcionamento fo funcionamento neural/muscular
+             \item recuperação após exercícios físicos intensos
+        \end{itemize}
+
+        O projeto não irá focar em nenhuma dessas aplicações a princípio
+    \section{Estado da Arte}
+        Atualmente existem muitos EMS's criados até para uso não comercial 
+        e portátil. Foi testado o produto EW433 da NAiS, que limita a tensão
+        para o máximo de 64V, tendo uma corrente eficaz de 4.5A e funcionando de 
+        1 até 50Hz.
+
+    \section{Metodologia}
+        Será usado um microcontrolador com um amplificador como um 
+        gerador de pulsos conectado a diversos eletrodos feito de uma 
+        pequena placa metálica que serão encostados na pele do braço do
+        indivíduo.
+
+    \section{Motivação}
+        A introdução para engenharia biomédica despertou um interesse
+        no funcionamento elétrico das células, quero expandir esse 
+        projeto depois para um entendimento cada vez maior do corpo humano 
+        como um sistema elétrico, visando assim criar novas ferramentas
+        para o melhor controle e tratamento de problemas relacionadas a isso.
+
+        O EMS foi escolhido por sua utilização como um aparelho para 
+        rehabilitação, o que pareceu muito interessante.
+
+    \newpage
+    \section{Referências}
+        \begin{enumerate}
+            \item European Journal of Applied Physiology.
+                Electrical stimulation for neuromuscular testing and training: state-of-the art and unresolved issues 
+                \url{https://link.springer.com/article/10.1007%2Fs00421-011-2133-7}
+            \item J Neuroeng Rehabil.
+                A Neuromuscular Electrical Stimulation (NMES) and robot hybrid system for multi-joint coordinated upper limb rehabilitation after stroke
+                \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5406922/}
+            \item Andrew Bulman, Andrew Mastele, Patrick Deeney, Brian Narby.
+                Neuromuscular Electrical Stimulator Design
+                \url{www.engineering.pitt.edu/Sub-Sites/Labs/Sharma-Lab/_Library/Spring2014_3/}
+        \end{enumerate}
+
+\end{document}
