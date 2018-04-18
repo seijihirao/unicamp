@@ -1,0 +1,75 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 8.902 
+
+Tcl Command:
+    report_path -multi_corner -file /home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab05/cla_4bits.txt -panel_name {Report Path} -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7]}] -to [get_keepers {cout sum[0] sum[1] sum[2] sum[3] sum[4] sum[5] sum[6] sum[7]}] -npaths 1
+
+Options:
+    -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7]}] 
+    -to [get_keepers {cout sum[0] sum[1] sum[2] sum[3] sum[4] sum[5] sum[6] sum[7]}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "/home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab05/cla_4bits.txt" 
+
+Delay Model:
+    Slow 1100mV 85C Model
+
++-----------------------------+
+; Summary of Paths            ;
++-------+-----------+---------+
+; Delay ; From Node ; To Node ;
++-------+-----------+---------+
+; 8.902 ; y[0]      ; cout    ;
++-------+-----------+---------+
+
+Path #1: Delay is 8.902
+===============================================================================
++-------------------+
+; Path Summary      ;
++-----------+-------+
+; Property  ; Value ;
++-----------+-------+
+; From Node ; y[0]  ;
+; To Node   ; cout  ;
+; Delay     ; 8.902 ;
++-----------+-------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 8.902 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 5     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  IC                    ;       ; 6     ; 4.271       ; 48         ; 0.000 ; 2.346 ;
+;  Cell                  ;       ; 7     ; 4.631       ; 52         ; 0.000 ; 2.696 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------+
+; Data Arrival Path                                                             ;
++---------+---------+----+------+--------+---------------------+----------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location            ; Element        ;
++---------+---------+----+------+--------+---------------------+----------------+
+; 8.902   ; 8.902   ;    ;      ;        ;                     ; data path      ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; PIN_AD26            ; y[0]           ;
+;   0.000 ;   0.000 ; FF ; IC   ; 1      ; IOIBUF_X89_Y16_N4   ; y[0]~input|i   ;
+;   0.938 ;   0.938 ; FF ; CELL ; 3      ; IOIBUF_X89_Y16_N4   ; y[0]~input|o   ;
+;   3.284 ;   2.346 ; FF ; IC   ; 1      ; LABCELL_X88_Y21_N42 ; c[2]~0|datae   ;
+;   3.469 ;   0.185 ; FF ; CELL ; 4      ; LABCELL_X88_Y21_N42 ; c[2]~0|combout ;
+;   3.664 ;   0.195 ; FF ; IC   ; 1      ; LABCELL_X88_Y21_N27 ; c[4]~1|datab   ;
+;   4.119 ;   0.455 ; FF ; CELL ; 3      ; LABCELL_X88_Y21_N27 ; c[4]~1|combout ;
+;   4.327 ;   0.208 ; FF ; IC   ; 1      ; LABCELL_X88_Y21_N12 ; c[6]~2|datad   ;
+;   4.613 ;   0.286 ; FF ; CELL ; 2      ; LABCELL_X88_Y21_N12 ; c[6]~2|combout ;
+;   4.826 ;   0.213 ; FF ; IC   ; 1      ; LABCELL_X88_Y21_N57 ; c~3|dataf      ;
+;   4.897 ;   0.071 ; FF ; CELL ; 1      ; LABCELL_X88_Y21_N57 ; c~3|combout    ;
+;   6.206 ;   1.309 ; FF ; IC   ; 1      ; IOOBUF_X89_Y15_N22  ; cout~output|i  ;
+;   8.902 ;   2.696 ; FF ; CELL ; 1      ; IOOBUF_X89_Y15_N22  ; cout~output|o  ;
+;   8.902 ;   0.000 ; FF ; CELL ; 0      ; PIN_W24             ; cout           ;
++---------+---------+----+------+--------+---------------------+----------------+
+
+

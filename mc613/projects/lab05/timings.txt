@@ -1,0 +1,1 @@
+Os tempos de delay dos circuitos foram praticamente os mesmos. Isso ocorre pois o somador CLA não encadeia circuitos menores para realizar somas maiores (como o ripple carry faz), dessa formaum somador de 4 bits terá um tempo similar que um de 8 bits, ou mesmo maior.
