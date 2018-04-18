@@ -1,0 +1,1 @@
+A diferença no funcionamento dos circuitos é que um funciona ao ser pressionado um botão o outro funciona com o clock (que é ativado através do SW9).
