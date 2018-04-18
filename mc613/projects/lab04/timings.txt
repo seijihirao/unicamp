@@ -1,0 +1,10 @@
+	A cada aumento no numero de bits que o somador opera, se aumenta o tamanho do circuito adicionando circuitos ripple carry concatenados. Ao adicionar novos ripple carry's se aumenta o delay do circuito, pois o sinal passa por todos os ripple carry's. Isso é observado no tempo de resposta dos circuitos, onde quanto maior a capacidade do somador, maior o tempo de resposta dele.
+
+tempo N = 4: 8.070 
+tempo N = 8: 13.289
+tempo N = 16: 12.721
+tempo N = 32: 19.981
+tempo N = 64: 37.937
+
+Observação: o tempo N = 16, deveria ter ficado mais demorado que o N = 8, não foi possível indentificar a causa desse erro.
+

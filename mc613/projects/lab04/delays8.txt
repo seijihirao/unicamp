@@ -1,0 +1,75 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 13.289 
+
+Tcl Command:
+    report_path -multi_corner -file /home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays8.txt -panel_name {Report Path} -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7]}] -to [get_keepers {cout overflow r[0] r[1] r[2] r[3] r[4] r[5] r[6] r[7]}] -npaths 1
+
+Options:
+    -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7]}] 
+    -to [get_keepers {cout overflow r[0] r[1] r[2] r[3] r[4] r[5] r[6] r[7]}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "/home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays8.txt" 
+
+Delay Model:
+    Slow 1100mV 85C Model
+
++------------------------------+
+; Summary of Paths             ;
++--------+-----------+---------+
+; Delay  ; From Node ; To Node ;
++--------+-----------+---------+
+; 13.289 ; x[0]      ; cout    ;
++--------+-----------+---------+
+
+Path #1: Delay is 13.289
+===============================================================================
++--------------------+
+; Path Summary       ;
++-----------+--------+
+; Property  ; Value  ;
++-----------+--------+
+; From Node ; x[0]   ;
+; To Node   ; cout   ;
+; Delay     ; 13.289 ;
++-----------+--------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 13.289 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 5     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  IC                    ;        ; 6     ; 7.919       ; 60         ; 0.000 ; 4.330 ;
+;  Cell                  ;        ; 7     ; 5.370       ; 40         ; 0.000 ; 2.823 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                         ;
++----------+---------+----+------+--------+--------------------+----------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location           ; Element                    ;
++----------+---------+----+------+--------+--------------------+----------------------------+
+; 13.289   ; 13.289  ;    ;      ;        ;                    ; data path                  ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_AF23           ; x[0]                       ;
+;   0.000  ;   0.000 ; FF ; IC   ; 1      ; IOIBUF_X74_Y0_N41  ; x[0]~input|i               ;
+;   0.918  ;   0.918 ; FF ; CELL ; 3      ; IOIBUF_X74_Y0_N41  ; x[0]~input|o               ;
+;   5.248  ;   4.330 ; FF ; IC   ; 1      ; LABCELL_X77_Y2_N42 ; \ripple:1:add|cout|dataa   ;
+;   5.706  ;   0.458 ; FF ; CELL ; 4      ; LABCELL_X77_Y2_N42 ; \ripple:1:add|cout|combout ;
+;   5.899  ;   0.193 ; FF ; IC   ; 1      ; LABCELL_X77_Y2_N21 ; \ripple:3:add|cout|datab   ;
+;   6.354  ;   0.455 ; FF ; CELL ; 3      ; LABCELL_X77_Y2_N21 ; \ripple:3:add|cout|combout ;
+;   6.579  ;   0.225 ; FF ; IC   ; 1      ; LABCELL_X77_Y2_N36 ; \ripple:5:add|cout|datac   ;
+;   6.994  ;   0.415 ; FF ; CELL ; 3      ; LABCELL_X77_Y2_N36 ; \ripple:5:add|cout|combout ;
+;   7.202  ;   0.208 ; FF ; IC   ; 1      ; LABCELL_X77_Y2_N51 ; \ripple:7:add|cout|datad   ;
+;   7.503  ;   0.301 ; FF ; CELL ; 1      ; LABCELL_X77_Y2_N51 ; \ripple:7:add|cout|combout ;
+;   10.466 ;   2.963 ; FF ; IC   ; 1      ; IOOBUF_X72_Y0_N53  ; cout~output|i              ;
+;   13.289 ;   2.823 ; FF ; CELL ; 1      ; IOOBUF_X72_Y0_N53  ; cout~output|o              ;
+;   13.289 ;   0.000 ; FF ; CELL ; 0      ; PIN_AK24           ; cout                       ;
++----------+---------+----+------+--------+--------------------+----------------------------+
+
+

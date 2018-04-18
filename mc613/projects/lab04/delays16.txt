@@ -1,0 +1,81 @@
+----------------
+; Command Info ;
+----------------
+Report Path: Found 1 paths. Longest delay is 12.721 
+
+Tcl Command:
+    report_path -multi_corner -file /home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays16.txt -panel_name {Report Path} -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] x[13] x[14] x[15] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7] y[8] y[9] y[10] y[11] y[12] y[13] y[14] y[15]}] -to [get_keepers {cout overflow r[0] r[1] r[2] r[3] r[4] r[5] r[6] r[7] r[8] r[9] r[10] r[11] r[12] r[13] r[14] r[15] x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] x[13] x[14] x[15]}] -npaths 1
+
+Options:
+    -from [get_keepers {cin x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] x[13] x[14] x[15] y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7] y[8] y[9] y[10] y[11] y[12] y[13] y[14] y[15]}] 
+    -to [get_keepers {cout overflow r[0] r[1] r[2] r[3] r[4] r[5] r[6] r[7] r[8] r[9] r[10] r[11] r[12] r[13] r[14] r[15] x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] x[13] x[14] x[15]}] 
+    -npaths 1 
+    -multi_corner 
+    -panel_name "Report Path" 
+    -file_name "/home/ec2016/ra186837/Documents/unicamp/mc613/projects/lab04/delays16.txt" 
+
+Delay Model:
+    Slow 1100mV 85C Model
+
++------------------------------+
+; Summary of Paths             ;
++--------+-----------+---------+
+; Delay  ; From Node ; To Node ;
++--------+-----------+---------+
+; 12.721 ; y[4]      ; cout    ;
++--------+-----------+---------+
+
+Path #1: Delay is 12.721
+===============================================================================
++--------------------+
+; Path Summary       ;
++-----------+--------+
+; Property  ; Value  ;
++-----------+--------+
+; From Node ; y[4]   ;
+; To Node   ; cout   ;
+; Delay     ; 12.721 ;
++-----------+--------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Data Delay             ; 12.721 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 8     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  IC                    ;        ; 9     ; 6.359       ; 50         ; 0.000 ; 2.261 ;
+;  Cell                  ;        ; 10    ; 6.362       ; 50         ; 0.000 ; 2.720 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                            ;
++----------+---------+----+------+--------+---------------------+------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location            ; Element                      ;
++----------+---------+----+------+--------+---------------------+------------------------------+
+; 12.721   ; 12.721  ;    ;      ;        ;                     ; data path                    ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_AK2             ; y[4]                         ;
+;   0.000  ;   0.000 ; FF ; IC   ; 1      ; IOIBUF_X20_Y0_N35   ; y[4]~input|i                 ;
+;   0.910  ;   0.910 ; FF ; CELL ; 2      ; IOIBUF_X20_Y0_N35   ; y[4]~input|o                 ;
+;   3.171  ;   2.261 ; FF ; IC   ; 1      ; MLABCELL_X21_Y1_N57 ; \ripple:4:add|r~0|datac      ;
+;   3.568  ;   0.397 ; FR ; CELL ; 2      ; MLABCELL_X21_Y1_N57 ; \ripple:4:add|r~0|combout    ;
+;   3.779  ;   0.211 ; RR ; IC   ; 1      ; MLABCELL_X21_Y1_N12 ; \ripple:4:add|cout~1|datad   ;
+;   4.185  ;   0.406 ; RR ; CELL ; 3      ; MLABCELL_X21_Y1_N12 ; \ripple:4:add|cout~1|combout ;
+;   4.397  ;   0.212 ; RR ; IC   ; 1      ; MLABCELL_X21_Y1_N24 ; \ripple:6:add|cout|datab     ;
+;   4.888  ;   0.491 ; RF ; CELL ; 4      ; MLABCELL_X21_Y1_N24 ; \ripple:6:add|cout|combout   ;
+;   6.015  ;   1.127 ; FF ; IC   ; 1      ; LABCELL_X11_Y1_N30  ; \ripple:9:add|cout~1|datad   ;
+;   6.364  ;   0.349 ; FR ; CELL ; 3      ; LABCELL_X11_Y1_N30  ; \ripple:9:add|cout~1|combout ;
+;   6.568  ;   0.204 ; RR ; IC   ; 1      ; LABCELL_X11_Y1_N18  ; \ripple:11:add|cout|datab    ;
+;   7.062  ;   0.494 ; RF ; CELL ; 4      ; LABCELL_X11_Y1_N18  ; \ripple:11:add|cout|combout  ;
+;   7.839  ;   0.777 ; FF ; IC   ; 1      ; LABCELL_X4_Y1_N24   ; \ripple:13:add|cout|dataf    ;
+;   7.921  ;   0.082 ; FR ; CELL ; 3      ; LABCELL_X4_Y1_N24   ; \ripple:13:add|cout|combout  ;
+;   8.139  ;   0.218 ; RR ; IC   ; 1      ; LABCELL_X4_Y1_N39   ; \ripple:15:add|cout|dataa    ;
+;   8.652  ;   0.513 ; RR ; CELL ; 1      ; LABCELL_X4_Y1_N39   ; \ripple:15:add|cout|combout  ;
+;   10.001 ;   1.349 ; RR ; IC   ; 1      ; IOOBUF_X8_Y0_N2     ; cout~output|i                ;
+;   12.721 ;   2.720 ; RR ; CELL ; 1      ; IOOBUF_X8_Y0_N2     ; cout~output|o                ;
+;   12.721 ;   0.000 ; RR ; CELL ; 0      ; PIN_AF4             ; cout                         ;
++----------+---------+----+------+--------+---------------------+------------------------------+
+
+
