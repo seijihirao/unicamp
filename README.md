@@ -36,7 +36,6 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
 * `F328` - Física 3
 * `F329` - Física Experimental 3
 * `EA513` - Circuitos Elétricos
-* `EA773` - Laboratório de Circuitos Lógicos
 * `CE738` - Economia para Engenharia
 
 ## 4º semestre
@@ -45,3 +44,13 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `MC404` - Organização Básica de Computadores e Linguagem de Montagem
  * `MC039` - Seminários sobre Computação e Tecnologia
  * `EA044` - Planejamento e Análise de Sistemas de Produção
+
+## 5º semestre
+
+ * `F315` - Mecânica Geral I
+ * `ME323` - Introdução aos Modelos Probabilísticos
+ * `MC613` - Laboratório de Circuitos Digitais
+ * `EE400` - Métodos da Engenharia Elétrica
+ * `EA997` - Introdução à Engenharia Biomédica
+ * `BE310` - Ciências do Ambiente
+ * `CE838` - Contabilidade para Engenharia
