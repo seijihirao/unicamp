@@ -1,0 +1,119 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(block
+	(rect 232 96 392 248)
+	(text "ram1" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst" (rect 5 136 23 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 600 96 760 248)
+	(text "ram1" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst3" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 784 96 944 248)
+	(text "ram1" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst4" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 416 96 576 248)
+	(text "ram1" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst2" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 232 272 392 424)
+	(text "ram2" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst5" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 416 272 576 424)
+	(text "ram2" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst6" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 600 272 760 424)
+	(text "ram2" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst7" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(block
+	(rect 784 272 944 424)
+	(text "ram2" (rect 5 5 35 20)(font "Intel Clear" (font_size 8)))	(text "inst8" (rect 5 136 29 149)(font "Intel Clear" ))	(block_io "Data" (input))
+	(block_io "Address" (input))
+	(block_io "Clock" (input))
+	(block_io "WrEn" (input))
+	(block_io "Q" (input))
+)
+(connector
+	(pt 216 184)
+	(pt 216 176)
+)
+(connector
+	(pt 136 224)
+	(pt 216 224)
+)
+(connector
+	(pt 960 160)
+	(pt 1064 160)
+)
+(connector
+	(pt 136 184)
+	(pt 216 184)
+)
+(connector
+	(pt 136 136)
+	(pt 216 136)
+)
+(connector
+	(pt 136 296)
+	(pt 216 296)
+)
+(text "RAM" (rect 224 72 251 87)(font "Intel Clear" (font_size 8)))
+(text "0" (rect 200 104 208 119)(font "Intel Clear" (font_size 8)))
+(text "127" (rect 192 240 214 255)(font "Intel Clear" (font_size 8)))
+(text "255" (rect 200 408 222 423)(font "Intel Clear" (font_size 8)))
+(text "Address" (rect 136 120 183 135)(font "Intel Clear" (font_size 8)))
+(text "Clock" (rect 144 168 175 183)(font "Intel Clear" (font_size 8)))
+(text "DataOut" (rect 1040 144 1088 159)(font "Intel Clear" (font_size 8)))
+(text "DataIn" (rect 144 208 181 223)(font "Intel Clear" (font_size 8)))
+(text "WrEn" (rect 144 280 175 295)(font "Intel Clear" (font_size 8)))
+(rectangle (rect 216 80 960 432))
