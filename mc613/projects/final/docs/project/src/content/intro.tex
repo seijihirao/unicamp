@@ -1,0 +1,48 @@
+\section{Introdução}
+
+Um dos métodos mais básicos de implementar um algoritmo de 
+aprendizagem de máquina é a regressão linear, que consiste em minimizar
+pelo método gradiente e na função de custo usando o método dos 
+mínimos quadrados.
+
+A aprendizagem de máquina consiste em 2 etapas, a etapa de treinamento
+e a de aplicação. Na etapa de treinamento temos uma lista de entradas e
+saídas esperadas, e otimizamos uma função para que ela tenha o menor
+erro possível. Na etapa de aplicação usamos a função otimizada em 
+novas entradas para produzir uma saída ótima.
+
+A regressão linear parte da função hipótese:
+
+$$h_\theta (x) = \sum_{i=0}^{n} \theta_i x_i$$
+
+Onde $x_i$ são as entradas, $n$ é o número de parâmetros e 
+$\theta_i$ são os argumentos que queremos encontrar
+
+A função de custo, que deve ser minimizada, é baseada no método
+dos mínimos quadrados, sendo a função:
+
+$$ J(\theta) = \frac{1}{2n}\sum_{i=i}^{n}(h_\theta (x_i) - y_i)^2$$
+
+Onde $y_i$ é o resultado esperado para $x_i$
+
+O método gradiente consiste em iterar sobre:
+
+$$ \theta_i := \theta_i - 
+    \alpha \frac{\partial}{\partial \theta_i} J(\theta)$$
+
+Onde $\alpha$ é o índice de aprendizado (quanto maior mais 
+rápido o aprendizado, quanto menor mais preciso).
+
+O sistema funcionará com um teclado e um monitor.
+
+As teclas terão as seguintes funcionalidades:
+
+\begin{itemize}
+    \item Números - valores de x ou y
+    \item Espaço - ir para o próximo x
+    \item Tab - alternar entre x e y
+    \item Enter - adicionar valores em treino
+    \item Ctrl+Enter - testar
+\end{itemize}
+
+O monitor irá mostrar a resposta e o custo atual.

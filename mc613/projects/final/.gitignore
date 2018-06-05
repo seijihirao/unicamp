@@ -1,0 +1,23 @@
+# build files
+*.img
+
+# workspace files
+**/template/
+*.log
+*.lof
+*.toc
+*.aux
+*.bak
+*.zip
+node_modules
+octave-workspace
+
+# Quartus files
+**/incremental_db/
+**/output_files/
+**/simulation/
+**/db/
+*.sdc
+*.qpf
+*.qsf
+*.qws
