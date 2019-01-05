@@ -54,3 +54,11 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `EA997` - Introdução à Engenharia Biomédica
  * `BE310` - Ciências do Ambiente
  * `CE838` - Contabilidade para Engenharia
+
+## 6º semestre
+
+ * `MS211` - Cálculo Numérico
+ * `F428` - Física 4
+ * `MC358` - Fundamentos Matemáticos da Computação
+ * `EA614` - Análise de Sinais
+ * `EA871` - Laboratório de Programação Básica de Sistemas Digitais
