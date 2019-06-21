@@ -62,3 +62,11 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `MC358` - Fundamentos Matemáticos da Computação
  * `EA614` - Análise de Sinais
  * `EA871` - Laboratório de Programação Básica de Sistemas Digitais
+ 
+## 7º semestre
+
+ * `MC458` - Projeto e Análise de Algoritmos I
+ * `EE532` - Eletrônica Aplicada
+ * `EA616` - Análise Linear de Sistemas
+ * `EE881` - Princípios de Comunicações I
+ * `EE838` - Introdução à Engenharia de Som I
