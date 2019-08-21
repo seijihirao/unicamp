@@ -70,3 +70,10 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `EA616` - Análise Linear de Sistemas
  * `EE881` - Princípios de Comunicações I
  * `EE838` - Introdução à Engenharia de Som I
+ 
+## 8º semestre
+
+ * `EE534` - Laboratório de Eletrônica Aplicada
+ * `EE882` - Laboratório de Comunicações I
+ * `EA202` - Engenharia de Software: Teoria e Prática
+ * `EA619` - Laboratório de Análise Linear
