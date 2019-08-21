@@ -66,6 +66,7 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
 ## 7º semestre
 
  * `MC458` - Projeto e Análise de Algoritmos I
+ * `MC504` - Sistemas Operacionais (proficiência)
  * `EE532` - Eletrônica Aplicada
  * `EA616` - Análise Linear de Sistemas
  * `EE881` - Princípios de Comunicações I
