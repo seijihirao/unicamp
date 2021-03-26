@@ -78,3 +78,20 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `EE882` - Laboratório de Comunicações I
  * `EA202` - Engenharia de Software: Teoria e Prática
  * `EA619` - Laboratório de Análise Linear
+
+## 9º semestre
+
+ * `QG111` - Química Teórica
+ * `QG122` - Química Experimental
+ * `MC832` - Redes de Computadores
+ * `EA960` - Organização de Computadores
+ * `CE304` - Direito
+
+## 10º semestre
+
+ * `EM423` - Resistência dos Materiais
+ * `EE610` - Eletrônica Digital I
+ * `EA721` - Princípios de Controle e Servomecanismo
+ * `EA722` - Laboratório de Controle e Servomecanismo
+ * `EA876` - Introdução a Software de Sistema
+ * `EA979` - Introdução à Computação Gráfica e ao Processamento de Imagem
