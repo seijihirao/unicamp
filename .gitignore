@@ -27,6 +27,11 @@ octave-workspace
 *.qsf
 *.qws
 
+# Matlab files
+*.original
+*.autosave
+slprj/
+
 # Specific files
 main
 dfs
