@@ -1,13 +1,13 @@
 Model {
-  Name			  "lab05"
+  Name			  "lab07"
   Version		  10.3
   SavedCharacterEncoding  "UTF-8"
-  ModelUUID		  "ecd410ff-7650-4d61-beaf-280ac15eaee4"
+  ModelUUID		  "f7a34cd7-cbfc-4923-ab69-e82574503519"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.8"
+    ComputedModelVersion    "1.9"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -77,9 +77,9 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [2446.0, 828.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-590.0, 133.0]
-	  SceneRectInView	  [-590.0, 133.0, 2446.0, 828.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [-196.9768403639373, 232.60356847453625]
+	  SceneRectInView	  [-196.9768403639373, 232.60356847453625, 1630.6666666666667, 552.0]
 	}
 	Object {
 	  $ObjectID		  6
@@ -164,7 +164,7 @@ Model {
       }
       WindowUuid	      "73b98cb5-e14f-4073-9185-4f69a7e93b9f"
     }
-    BDUuid		    "31e1a127-3fd6-497d-ae54-08e543f5412e"
+    BDUuid		    "145a8530-908d-42d8-aad3-2b9c09748a2e"
   }
   HideAutomaticNames	  on
   SequenceViewerTimePrecision 3
@@ -174,9 +174,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "kisdev"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jun 09 20:00:48 2021"
-  RTWModifiedTimeStamp	  544801917
-  ModelVersionFormat	  "%<AutoIncrement:1.8>"
+  LastModifiedDate	  "Fri Jun 11 18:19:47 2021"
+  RTWModifiedTimeStamp	  545335254
+  ModelVersionFormat	  "%<AutoIncrement:1.9>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -236,12 +236,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    11
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "lab05"
+    model_		    "lab07"
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "lab05"
+      Cell		      "lab07"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1129,51 +1129,6 @@ Model {
       SampleTime	      "-1"
     }
     Block {
-      BlockType		      Inport
-      Port		      "1"
-      IconDisplay	      "Port number"
-      OutputFunctionCall      off
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
-      BusOutputAsStruct	      off
-      Unit		      "inherit"
-      PortDimensions	      "-1"
-      VarSizeSig	      "Inherit"
-      SampleTime	      "-1"
-      SignalType	      "auto"
-      SamplingMode	      "auto"
-      LatchByDelayingOutsideSignal off
-      LatchInputForFeedbackSignals off
-      Interpolate	      on
-    }
-    Block {
-      BlockType		      Outport
-      Port		      "1"
-      IconDisplay	      "Port number"
-      OutputFunctionCall      off
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
-      BusOutputAsStruct	      off
-      Unit		      "inherit"
-      PortDimensions	      "-1"
-      VarSizeSig	      "Inherit"
-      SampleTime	      "-1"
-      SignalType	      "auto"
-      SamplingMode	      "auto"
-      EnsureOutportIsVirtual  off
-      SourceOfInitialOutputValue "Dialog"
-      OutputWhenDisabled      "held"
-      InitialOutput	      "[]"
-      MustResolveToSignalObject	off
-      OutputWhenUnConnected   off
-      OutputWhenUnconnectedValue "0"
-      VectorParamsAs1DForOutWhenUnconnected on
-    }
-    Block {
       BlockType		      Scope
       DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
     }
@@ -1186,46 +1141,6 @@ Model {
       SampleTime	      "-1"
       VectorParams1D	      on
       ZeroCross		      on
-    }
-    Block {
-      BlockType		      SubSystem
-      ShowPortLabels	      "FromPortIcon"
-      Permissions	      "ReadWrite"
-      PermitHierarchicalResolution "All"
-      TreatAsAtomicUnit	      off
-      MinAlgLoopOccurrences   off
-      ScheduleAs	      "Sample time"
-      SystemSampleTime	      "-1"
-      RTWSystemCode	      "Auto"
-      RTWFcnNameOpts	      "Auto"
-      RTWFileNameOpts	      "Auto"
-      FunctionInterfaceSpec   "void_void"
-      FunctionWithSeparateData off
-      MatchGraphicalInterface off
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      SimViewingDevice	      off
-      DataTypeOverride	      "UseLocalSettings"
-      DataTypeOverrideAppliesTo	"AllNumericTypes"
-      MinMaxOverflowLogging   "UseLocalSettings"
-      Opaque		      off
-      MaskHideContents	      off
-      SFBlockType	      "NONE"
-      Variant		      off
-      VariantControlMode      "expression"
-      VariantActivationTime   "update diagram"
-      AllowZeroVariantControls off
-      PropagateVariantConditions off
-      TreatAsGroupedWhenPropagatingVariantConditions on
-      ContentPreviewEnabled   off
-      IsWebBlock	      off
-      IsInjectorSS	      off
-      Latency		      "0"
-      AutoFrameSizeCalculation off
-      IsWebBlockPanel	      off
     }
     Block {
       BlockType		      Sum
@@ -1254,7 +1169,7 @@ Model {
     }
   }
   System {
-    Name		    "lab05"
+    Name		    "lab07"
     Location		    [0, 23, 2560, 1080]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
@@ -1271,202 +1186,76 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "34"
+    SIDHighWatermark	    "46"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Sum
       Name		      "Add"
       SID		      "29"
       Ports		      [2, 1]
-      Position		      [305, 452, 335, 483]
+      Position		      [320, 452, 350, 483]
       ZOrder		      9
       IconShape		      "rectangular"
     }
     Block {
-      BlockType		      SubSystem
-      Name		      "PD"
-      SID		      "6"
-      Ports		      [1, 1]
-      Position		      [620, 427, 780, 513]
-      ZOrder		      4
-      RequestExecContextInheritance off
-      ContentPreviewEnabled   on
-      System {
-	Name			"PD"
-	Location		[0, 23, 2560, 1080]
-	SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
-	Open			off
-	PortBlocksUseCompactNotation off
-	SetExecutionDomain	off
-	ExecutionDomainType	"Deduce"
-	ModelBrowserVisibility	on
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	SimulinkSubDomain	"Simulink"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  SID			  "7"
-	  Position		  [-285, 88, -255, 102]
-	  ZOrder		  -1
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Add"
-	  SID			  "12"
-	  Ports			  [2, 1]
-	  Position		  [75, 82, 105, 113]
-	  ZOrder		  6
-	  IconShape		  "rectangular"
-	}
-	Block {
-	  BlockType		  Derivative
-	  Name			  "Derivative"
-	  SID			  "13"
-	  Position		  [-115, 120, -85, 150]
-	  ZOrder		  7
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "Gain"
-	  SID			  "8"
-	  Position		  [-40, 47, 35, 93]
-	  ZOrder		  4
-	  Gain			  "k_p"
-	}
-	Block {
-	  BlockType		  Gain
-	  Name			  "Gain1"
-	  SID			  "11"
-	  Position		  [-40, 112, 35, 158]
-	  ZOrder		  5
-	  Gain			  "k_d"
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "14"
-	  Ports			  [2, 1]
-	  Position		  [-205, 85, -185, 105]
-	  ZOrder		  8
-	  Inputs		  "|+-"
-	}
-	Block {
-	  BlockType		  TransferFcn
-	  Name			  "Transfer Fcn"
-	  SID			  "9"
-	  Position		  [145, 79, 220, 121]
-	  ZOrder		  3
-	  Numerator		  "G_p.Numerator{1,1}"
-	  Denominator		  "G_p.Denominator{1,1}"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  SID			  "10"
-	  Position		  [260, 93, 290, 107]
-	  ZOrder		  -2
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "Transfer Fcn"
-	  SrcPort		  1
-	  Points		  [10, 0]
-	  Branch {
-	    ZOrder		    13
-	    Points		    [0, 82; -430, 0]
-	    DstBlock		    "Sum"
-	    DstPort		    2
-	  }
-	  Branch {
-	    ZOrder		    12
-	    DstBlock		    "Out1"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  4
-	  SrcBlock		  "Gain"
-	  SrcPort		  1
-	  Points		  [15, 0; 0, 20]
-	  DstBlock		  "Add"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  5
-	  SrcBlock		  "Gain1"
-	  SrcPort		  1
-	  Points		  [15, 0; 0, -30]
-	  DstBlock		  "Add"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  6
-	  SrcBlock		  "Derivative"
-	  SrcPort		  1
-	  DstBlock		  "Gain1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  7
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  8
-	  SrcBlock		  "Sum"
-	  SrcPort		  1
-	  Points		  [30, 0]
-	  Branch {
-	    ZOrder		    11
-	    Points		    [0, 40]
-	    DstBlock		    "Derivative"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    10
-	    Points		    [0, -25]
-	    DstBlock		    "Gain"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  14
-	  SrcBlock		  "Add"
-	  SrcPort		  1
-	  DstBlock		  "Transfer Fcn"
-	  DstPort		  1
-	}
-      }
+      BlockType		      Sum
+      Name		      "Add1"
+      SID		      "38"
+      Ports		      [2, 1]
+      Position		      [985, 462, 1015, 493]
+      ZOrder		      17
+      IconShape		      "rectangular"
     }
     Block {
-      BlockType		      TransferFcn
-      Name		      "S(s)/R(s)"
-      SID		      "31"
-      Position		      [670, 572, 730, 608]
-      ZOrder		      11
-      BlockMirror	      on
-      Numerator		      "S.Numerator{1,1}"
-      Denominator	      "R.Numerator{1,1}"
+      BlockType		      Derivative
+      Name		      "Derivative"
+      SID		      "37"
+      Position		      [900, 490, 930, 520]
+      ZOrder		      16
+    }
+    Block {
+      BlockType		      Derivative
+      Name		      "Derivative1"
+      SID		      "45"
+      Position		      [580, 515, 610, 545]
+      ZOrder		      25
+      BlockRotation	      270
+      NameLocation	      "right"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      SID		      "36"
+      Position		      [845, 490, 875, 520]
+      ZOrder		      15
+      Gain		      "t"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain1"
+      SID		      "44"
+      Position		      [500, 455, 530, 485]
+      ZOrder		      23
+      Gain		      "k_p"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain2"
+      SID		      "46"
+      Position		      [580, 570, 610, 600]
+      ZOrder		      24
+      BlockRotation	      270
+      NameLocation	      "right"
+      Gain		      "k_d"
     }
     Block {
       BlockType		      Scope
       Name		      "Scope"
       SID		      "16"
       Ports		      [3]
-      Position		      [1025, 442, 1055, 478]
+      Position		      [1260, 452, 1290, 488]
       ZOrder		      6
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -1486,10 +1275,10 @@ Model {
       "98039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot "
       "Navigation',true,'OnceAtStop',false,'PreviousZoomMode','ZoomY','PreviousAutoscale','XY'),extmgr.Configuration('T"
       "ools','Measurements',true,'Version','2021a','Measurements',struct('traceselector',struct('Line',2),'tcursors',st"
-      "ruct('XCoordinates',[0.112413948993289 1.87496400000001],'YCoordinates',[-834.696602527474 -1045.95482051557],'C"
-      "ursorChannels',[2 2],'WaveformCursors',true,'ShowHorizontal',false,'ShowVertical',true,'LockCursorSpacing',false"
-      ",'SnapToData',false,'SettingsPanelOpen',0,'MeasurementsPanelOpen',1)))),'Version','2021a','Position',[482 184 10"
-      "66 506])"
+      "ruct('XCoordinates',[0.112413948993289 1.87496400000001],'YCoordinates',[NaN NaN],'CursorChannels',[2 2],'Wavefo"
+      "rmCursors',true,'ShowHorizontal',false,'ShowVertical',true,'LockCursorSpacing',false,'SnapToData',false,'Setting"
+      "sPanelOpen',0,'MeasurementsPanelOpen',1)))),'Version','2021a','Position',[379 112 1066 506],'VisibleAtModelOpen'"
+      ",'on')"
       NumInputPorts	      "3"
       Floating		      off
     }
@@ -1497,7 +1286,7 @@ Model {
       BlockType		      Step
       Name		      "Step"
       SID		      "15"
-      Position		      [195, 425, 225, 455]
+      Position		      [210, 425, 240, 455]
       ZOrder		      5
       Time		      "0"
       After		      "500"
@@ -1507,7 +1296,7 @@ Model {
       BlockType		      Step
       Name		      "Step1"
       SID		      "28"
-      Position		      [195, 480, 225, 510]
+      Position		      [210, 480, 240, 510]
       ZOrder		      8
       Time		      "10"
       After		      "-500"
@@ -1516,46 +1305,56 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum"
-      SID		      "32"
+      SID		      "39"
       Ports		      [2, 1]
-      Position		      [535, 460, 555, 480]
-      ZOrder		      12
+      Position		      [750, 460, 770, 480]
+      ZOrder		      18
+      Inputs		      "|+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      SID		      "42"
+      Ports		      [2, 1]
+      Position		      [425, 460, 445, 480]
+      ZOrder		      21
+      Inputs		      "|+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      SID		      "43"
+      Ports		      [2, 1]
+      Position		      [585, 460, 605, 480]
+      ZOrder		      22
       Inputs		      "|+-"
     }
     Block {
       BlockType		      TransferFcn
       Name		      "T(s)/X(s)"
       SID		      "30"
-      Position		      [845, 452, 905, 488]
+      Position		      [1055, 462, 1115, 498]
       ZOrder		      10
-      Numerator		      "N_ax.Numerator{1,1}"
-      Denominator	      "D_ax.Numerator{1,1}"
+      Numerator		      "N_1.Numerator{1,1}"
+      Denominator	      "D.Numerator{1,1}"
     }
     Block {
       BlockType		      TransferFcn
-      Name		      "k_pfc/R(s)"
-      SID		      "33"
-      Position		      [410, 452, 470, 488]
-      ZOrder		      13
-      Numerator		      "k_pfc"
-      Denominator	      "R.Numerator{1,1}"
+      Name		      "T(s)/X(s)1"
+      SID		      "40"
+      Position		      [1165, 462, 1225, 498]
+      ZOrder		      19
+      Numerator		      "N_2.Numerator{1,1}"
+      Denominator	      "N_1.Numerator{1,1}"
     }
-    Line {
-      ZOrder		      33
-      SrcBlock		      "Add"
-      SrcPort		      1
-      Points		      [10, 0]
-      Branch {
-	ZOrder			67
-	DstBlock		"k_pfc/R(s)"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			66
-	Points			[0, -67; 656, 0; 0, 47]
-	DstBlock		"Scope"
-	DstPort			1
-      }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "T(s)/X(s)2"
+      SID		      "41"
+      Position		      [660, 452, 720, 488]
+      ZOrder		      20
+      Numerator		      "N_n.Numerator{1,1}"
+      Denominator	      "D_n.Numerator{1,1}"
     }
     Line {
       ZOrder		      34
@@ -1574,60 +1373,151 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      55
-      SrcBlock		      "PD"
+      ZOrder		      56
+      SrcBlock		      "T(s)/X(s)"
       SrcPort		      1
-      Points		      [19, 0]
+      Points		      [14, 0]
       Branch {
-	ZOrder			83
-	Points			[0, -42; 191, 0; 0, 32]
+	ZOrder			114
+	Points			[0, -31; 100, 0; 0, 21]
 	DstBlock		"Scope"
 	DstPort			2
       }
       Branch {
-	ZOrder			82
-	DstBlock		"T(s)/X(s)"
+	ZOrder			108
+	DstBlock		"T(s)/X(s)1"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			107
+	Points			[0, 72; -374, 0]
+	DstBlock		"Sum"
+	DstPort			2
+      }
+    }
+    Line {
+      ZOrder		      92
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      DstBlock		      "Derivative"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      94
+      SrcBlock		      "Add1"
+      SrcPort		      1
+      DstBlock		      "T(s)/X(s)"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      95
+      SrcBlock		      "Derivative"
+      SrcPort		      1
+      Points		      [30, 0; 0, -20]
+      DstBlock		      "Add1"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      100
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [22, 0]
+      Branch {
+	ZOrder			102
+	Points			[0, 35]
+	DstBlock		"Gain"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			101
+	DstBlock		"Add1"
 	DstPort			1
       }
     }
     Line {
-      ZOrder		      56
-      SrcBlock		      "T(s)/X(s)"
+      ZOrder		      105
+      SrcBlock		      "Add"
       SrcPort		      1
-      Points		      [55, 0]
+      Points		      [13, 0]
       Branch {
-	ZOrder			86
-	Points			[0, 120]
-	DstBlock		"S(s)/R(s)"
+	ZOrder			125
+	DstBlock		"Sum1"
 	DstPort			1
       }
       Branch {
-	ZOrder			84
+	ZOrder			124
+	Points			[0, -34; 875, 0; 0, 24]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      106
+      SrcBlock		      "T(s)/X(s)1"
+      SrcPort		      1
+      Points		      [6, 0]
+      Branch {
+	ZOrder			119
+	Points			[0, 150; -641, 0]
+	Branch {
+	  ZOrder		  123
+	  DstBlock		  "Gain2"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  122
+	  Points		  [-160, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	ZOrder			118
 	DstBlock		"Scope"
 	DstPort			3
       }
     }
     Line {
-      ZOrder		      61
-      SrcBlock		      "S(s)/R(s)"
+      ZOrder		      111
+      SrcBlock		      "T(s)/X(s)2"
       SrcPort		      1
-      Points		      [-120, 0]
       DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      115
+      SrcBlock		      "Gain1"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      116
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Gain1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      117
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "T(s)/X(s)2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      120
+      SrcBlock		      "Gain2"
+      SrcPort		      1
+      DstBlock		      "Derivative1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      121
+      SrcBlock		      "Derivative1"
+      SrcPort		      1
+      DstBlock		      "Sum2"
       DstPort		      2
-    }
-    Line {
-      ZOrder		      62
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      DstBlock		      "PD"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      68
-      SrcBlock		      "k_pfc/R(s)"
-      SrcPort		      1
-      DstBlock		      "Sum"
-      DstPort		      1
     }
   }
 }

@@ -1,0 +1,55 @@
+from multiprocessing import Process
+import shlex, subprocess, signal, threading, os, sys
+
+INSTRUCTIONS = '''
+Following instructions are supported:
+    * s - suspends
+    * t - terminate
+    * c - continue
+'''
+
+child_process_name = ''
+child_process = None
+
+def endProcessHandler(signalNumber, frame):
+    '''
+    Callback for when child process is suspended or terminated
+    '''
+    global child_process_name
+    global child_process
+    
+    # Restart only when process is terminated
+    if (child_process is not None and child_process.poll() is not None):
+        print('Process [%s] finished' % child_process_name)
+        os.execv(sys.executable, ['python'] + sys.argv)
+
+def main():
+    '''
+    Manage a subprocess as instructions
+    '''
+    global child_process_name
+    global child_process
+
+    signal.signal(signal.SIGCHLD, endProcessHandler)
+
+    child_process_name = input('\nType the process you want to open\n')
+    args = shlex.split(child_process_name)
+    child_process = subprocess.Popen(args)
+    print(INSTRUCTIONS)
+    while True:
+        code = input()
+        if (code == 't'):
+            child_process.terminate() # os.kill ans signal.SIGKILL are also valid ways to terminate
+            break
+        elif (code == 's'):
+            child_process.send_signal(signal.SIGSTOP)
+        elif (code == 'c'):
+            child_process.send_signal(signal.SIGCONT)
+
+
+#
+# Running the progam
+#
+
+if __name__ == '__main__':
+    main()
