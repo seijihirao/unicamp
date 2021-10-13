@@ -9,3 +9,7 @@
 [submodule "ea872/cpp"]
 	path = ea872/cpp
 	url = git@github.com:seijihirao/cpp.git
+
+[submodule "ea979/labs"]
+	path = ea979/labs
+	url = git@github.com:seijihirao/ea979.git
