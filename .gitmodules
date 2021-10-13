@@ -1,0 +1,3 @@
+[submodule "ea872/project"]
+	path = ea872/project
+	url = git@github.com:seijihirao/ea872.git
