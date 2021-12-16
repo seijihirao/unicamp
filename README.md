@@ -95,3 +95,16 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `EA722` - Laboratório de Controle e Servomecanismo
  * `EA876` - Introdução a Software de Sistema
  * `EA979` - Introdução à Computação Gráfica e ao Processamento de Imagem
+
+## 11º semestre
+
+ * `EA072` - Inteligência Artificial em Aplicações Industriais
+ * `EA080` - Laboratório de Redes de Computadores
+ * `EA872` - Laboratório de Programação de Software Básico
+ * `IA012` - Segurança em Comunicação de Dados __(pós-graduação)__
+ * `MC886` - Aprendizado de Máquina
+
+## 12º semestre
+
+ * `EA006` - Trabalho de Fim de Curso
+ * `EA201` - Sistemas Embarcados: Teoria e Prática
