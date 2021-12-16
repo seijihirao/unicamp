@@ -101,10 +101,10 @@ Infelizmente matérias do meu primeiro semestre estarão majoritariamente incomp
  * `EA072` - Inteligência Artificial em Aplicações Industriais
  * `EA080` - Laboratório de Redes de Computadores
  * `EA872` - Laboratório de Programação de Software Básico
- * `IA012` - Segurança em Comunicação de Dados __(pós-graduação)__
+ * `IA012` - Segurança em Comunicação de Dados `(pós-graduação)`
  * `MC886` - Aprendizado de Máquina
 
 ## 12º semestre
 
- * `EA006` - Trabalho de Fim de Curso
+ * `EA006` - __Trabalho de Fim de Curso__
  * `EA201` - Sistemas Embarcados: Teoria e Prática
