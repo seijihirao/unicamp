@@ -32,6 +32,9 @@ octave-workspace
 *.autosave
 slprj/
 
+# External projects
+ea006/ion-tools
+
 # Specific files
 main
 dfs
